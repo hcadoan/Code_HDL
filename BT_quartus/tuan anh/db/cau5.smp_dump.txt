@@ -1,0 +1,12 @@
+
+State Machine - |cau5|currents
+Name currents.s010 currents.s01 currents.s0 currents.s1011 currents.s101 currents.s10 currents.s1 currents.start currents.s0101 
+currents.start 0 0 0 0 0 0 0 0 0 
+currents.s1 0 0 0 0 0 0 1 1 0 
+currents.s10 0 0 0 0 0 1 0 1 0 
+currents.s101 0 0 0 0 1 0 0 1 0 
+currents.s1011 0 0 0 1 0 0 0 1 0 
+currents.s0 0 0 1 0 0 0 0 1 0 
+currents.s01 0 1 0 0 0 0 0 1 0 
+currents.s010 1 0 0 0 0 0 0 1 0 
+currents.s0101 0 0 0 0 0 0 0 1 1 

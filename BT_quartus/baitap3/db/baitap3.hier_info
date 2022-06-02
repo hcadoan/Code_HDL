@@ -1,0 +1,59 @@
+|baitap3
+ck => ck.IN1
+rs => rs.IN1
+led1[0] <= giaima_np:u2.port2
+led1[1] <= giaima_np:u2.port2
+led1[2] <= giaima_np:u2.port2
+led1[3] <= giaima_np:u2.port2
+led1[4] <= giaima_np:u2.port2
+led1[5] <= giaima_np:u2.port2
+led1[6] <= giaima_np:u2.port2
+led1[7] <= giaima_np:u2.port2
+led2[0] <= giaima_np:u2.port1
+led2[1] <= giaima_np:u2.port1
+led2[2] <= giaima_np:u2.port1
+led2[3] <= giaima_np:u2.port1
+led2[4] <= giaima_np:u2.port1
+led2[5] <= giaima_np:u2.port1
+led2[6] <= giaima_np:u2.port1
+led2[7] <= giaima_np:u2.port1
+
+
+|baitap3|dem:u1
+ck => q[0]~reg0.CLK
+ck => q[1]~reg0.CLK
+ck => q[2]~reg0.CLK
+ck => q[3]~reg0.CLK
+rs => q[0]~reg0.ACLR
+rs => q[1]~reg0.ACLR
+rs => q[2]~reg0.ACLR
+rs => q[3]~reg0.ACLR
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baitap3|giaima_np:u2
+q[0] => Decoder0.IN3
+q[1] => Decoder0.IN2
+q[2] => Decoder0.IN1
+q[3] => Decoder0.IN0
+y1[0] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+y1[1] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+y1[2] <= y1.DB_MAX_OUTPUT_PORT_TYPE
+y1[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+y1[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+y1[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+y1[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+y1[7] <= <VCC>
+y2[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+y2[1] <= <GND>
+y2[2] <= <GND>
+y2[3] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+y2[4] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+y2[5] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+y2[6] <= <VCC>
+y2[7] <= <VCC>
+
+

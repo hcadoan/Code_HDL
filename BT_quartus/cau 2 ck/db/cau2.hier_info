@@ -1,0 +1,23 @@
+|cau2
+LT => a.IN0
+RBI => Equal0.IN0
+BI_RBO => comb.IN1
+BI_RBO => a.IN1
+BI_RBO => comb.IN1
+A0 => Decoder0.IN0
+A0 => Equal0.IN4
+A1 => Decoder0.IN1
+A1 => Equal0.IN3
+A2 => Decoder0.IN2
+A2 => Equal0.IN2
+A3 => Decoder0.IN3
+A3 => Equal0.IN1
+a <= a$latch.DB_MAX_OUTPUT_PORT_TYPE
+b <= b$latch.DB_MAX_OUTPUT_PORT_TYPE
+c <= c$latch.DB_MAX_OUTPUT_PORT_TYPE
+d <= d$latch.DB_MAX_OUTPUT_PORT_TYPE
+e <= e$latch.DB_MAX_OUTPUT_PORT_TYPE
+f <= f$latch.DB_MAX_OUTPUT_PORT_TYPE
+g <= g$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

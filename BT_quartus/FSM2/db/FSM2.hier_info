@@ -1,0 +1,24 @@
+|FSM2
+ck => c[0]~reg0.CLK
+ck => c[1]~reg0.CLK
+ck => c[2]~reg0.CLK
+rs => c.OUTPUTSELECT
+rs => c.OUTPUTSELECT
+rs => c.OUTPUTSELECT
+stop => Mux0.IN7
+x <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+d <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+v <= <GND>
+HEX[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= <VCC>
+HEX[4] <= <VCC>
+HEX[5] <= <VCC>
+HEX[6] <= <VCC>
+HEX[7] <= <VCC>
+c[0] <= c[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c[1] <= c[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c[2] <= c[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

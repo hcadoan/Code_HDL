@@ -1,0 +1,13 @@
+{D:/HOANG CA/THUC HANH HDL/BAI TAP TH/nhancong_3bit.v} {1 {vlog -work work {D:/HOANG CA/THUC HANH HDL/BAI TAP TH/nhancong_3bit.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module nhancong_3bit
+-- Compiling module luythua
+-- Compiling module nhan3bit
+-- Compiling module add6bit
+-- Compiling module fa
+-- Compiling module TB_nhancong_3bit
+
+Top level modules:
+	TB_nhancong_3bit
+
+} {} {}}

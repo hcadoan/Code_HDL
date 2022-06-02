@@ -1,0 +1,39 @@
+|bcd3digit
+ck => bcd0[0]~reg0.CLK
+ck => bcd0[1]~reg0.CLK
+ck => bcd0[2]~reg0.CLK
+ck => bcd0[3]~reg0.CLK
+ck => bcd1[0]~reg0.CLK
+ck => bcd1[1]~reg0.CLK
+ck => bcd1[2]~reg0.CLK
+ck => bcd1[3]~reg0.CLK
+ck => bcd2[0]~reg0.CLK
+ck => bcd2[1]~reg0.CLK
+ck => bcd2[2]~reg0.CLK
+ck => bcd2[3]~reg0.CLK
+rs => bcd2.OUTPUTSELECT
+rs => bcd2.OUTPUTSELECT
+rs => bcd2.OUTPUTSELECT
+rs => bcd2.OUTPUTSELECT
+rs => bcd1.OUTPUTSELECT
+rs => bcd1.OUTPUTSELECT
+rs => bcd1.OUTPUTSELECT
+rs => bcd1.OUTPUTSELECT
+rs => bcd0.OUTPUTSELECT
+rs => bcd0.OUTPUTSELECT
+rs => bcd0.OUTPUTSELECT
+rs => bcd0.OUTPUTSELECT
+bcd2[0] <= bcd2[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bcd2[1] <= bcd2[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bcd2[2] <= bcd2[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bcd2[3] <= bcd2[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bcd1[0] <= bcd1[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bcd1[1] <= bcd1[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bcd1[2] <= bcd1[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bcd1[3] <= bcd1[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bcd0[0] <= bcd0[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bcd0[1] <= bcd0[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bcd0[2] <= bcd0[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bcd0[3] <= bcd0[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

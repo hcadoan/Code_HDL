@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\HUONG\Desktop\BT quartus\bcd 3 digit\simulation\qsim
+vbcd3digit
+Z1 !s100 3NZR^mEd9RoQBh_HNX4g`2
+Z2 IQ5^^G<kRXDNK5T:SLYM8G3
+Z3 V@=>>7<zTGmLH_;[aOL5eC3
+Z4 dC:\Users\HUONG\Desktop\BT quartus\bcd 3 digit\simulation\qsim
+Z5 w1623508672
+Z6 8bcd3digit.vo
+Z7 Fbcd3digit.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|bcd3digit.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1623508673.461000
+Z12 !s107 bcd3digit.vo|
+!s101 -O0
+vbcd3digit_vlg_check_tst
+!i10b 1
+!s100 R_R8:kJBnRKe@@1@k90j[0
+Idl2J7Yde7n8]kzzDEW<;P1
+Z13 VVWzk6IYH=2XW:f;fHQ:z41
+R4
+Z14 w1623508671
+Z15 8bcd3digit.vt
+Z16 Fbcd3digit.vt
+L0 59
+R8
+r1
+!s85 0
+31
+Z17 !s108 1623508673.631000
+Z18 !s107 bcd3digit.vt|
+Z19 !s90 -work|work|bcd3digit.vt|
+!s101 -O0
+R10
+vbcd3digit_vlg_sample_tst
+!i10b 1
+Z20 !s100 W=c`gb=a5zz4?8R3OfCkN3
+Z21 IXW^5e9E_>=jS51j[;j`bk2
+Z22 V_EeZ8o>E<FdQg?HV<o[Fe3
+R4
+R14
+R15
+R16
+L0 29
+R8
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R10
+vbcd3digit_vlg_vec_tst
+!i10b 1
+!s100 0U`^OB0<NlHY>ZZ>V:H7A1
+Iib[KlMYh7AzA:[_4D_gCf3
+Z23 V]NgaaiVNKfgaaa]E=Dc4@0
+R4
+R14
+R15
+R16
+Z24 L0 367
+R8
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R10

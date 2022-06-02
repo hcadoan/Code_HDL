@@ -1,0 +1,102 @@
+|mux81_4bit
+S[0] => S[0].IN4
+S[1] => S[1].IN4
+S[2] => S[2].IN4
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+C[0] => C[0].IN1
+C[1] => C[1].IN1
+C[2] => C[2].IN1
+C[3] => C[3].IN1
+D[0] => D[0].IN1
+D[1] => D[1].IN1
+D[2] => D[2].IN1
+D[3] => D[3].IN1
+E[0] => E[0].IN1
+E[1] => E[1].IN1
+E[2] => E[2].IN1
+E[3] => E[3].IN1
+F[0] => F[0].IN1
+F[1] => F[1].IN1
+F[2] => F[2].IN1
+F[3] => F[3].IN1
+G[0] => G[0].IN1
+G[1] => G[1].IN1
+G[2] => G[2].IN1
+G[3] => G[3].IN1
+H[0] => H[0].IN1
+H[1] => H[1].IN1
+H[2] => H[2].IN1
+H[3] => H[3].IN1
+Y[0] <= mux81:u1.port2
+Y[1] <= mux81:u2.port2
+Y[2] <= mux81:u3.port2
+Y[3] <= mux81:u4.port2
+
+
+|mux81_4bit|mux81:u1
+s[0] => Mux0.IN10
+s[1] => Mux0.IN9
+s[2] => Mux0.IN8
+x[0] => Mux0.IN7
+x[1] => Mux0.IN6
+x[2] => Mux0.IN5
+x[3] => Mux0.IN4
+x[4] => Mux0.IN3
+x[5] => Mux0.IN2
+x[6] => Mux0.IN1
+x[7] => Mux0.IN0
+y <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux81_4bit|mux81:u2
+s[0] => Mux0.IN10
+s[1] => Mux0.IN9
+s[2] => Mux0.IN8
+x[0] => Mux0.IN7
+x[1] => Mux0.IN6
+x[2] => Mux0.IN5
+x[3] => Mux0.IN4
+x[4] => Mux0.IN3
+x[5] => Mux0.IN2
+x[6] => Mux0.IN1
+x[7] => Mux0.IN0
+y <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux81_4bit|mux81:u3
+s[0] => Mux0.IN10
+s[1] => Mux0.IN9
+s[2] => Mux0.IN8
+x[0] => Mux0.IN7
+x[1] => Mux0.IN6
+x[2] => Mux0.IN5
+x[3] => Mux0.IN4
+x[4] => Mux0.IN3
+x[5] => Mux0.IN2
+x[6] => Mux0.IN1
+x[7] => Mux0.IN0
+y <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux81_4bit|mux81:u4
+s[0] => Mux0.IN10
+s[1] => Mux0.IN9
+s[2] => Mux0.IN8
+x[0] => Mux0.IN7
+x[1] => Mux0.IN6
+x[2] => Mux0.IN5
+x[3] => Mux0.IN4
+x[4] => Mux0.IN3
+x[5] => Mux0.IN2
+x[6] => Mux0.IN1
+x[7] => Mux0.IN0
+y <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

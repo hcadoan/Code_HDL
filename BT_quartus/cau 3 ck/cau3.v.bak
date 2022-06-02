@@ -1,0 +1,18 @@
+module cau3(ck, rs, load, s, data, out);
+input ck;
+input rs;
+input load;
+input s;
+input [3:0] data;
+output reg [3:0] out;
+always @ (posedge ck) begin
+  if (rs == 1) out[3:0] <= 0;
+  else if (load ==1 ) out[3:0] <= data[3:0];
+  else begin
+    case (s)
+      1'b1: out[3:0] <= out[3:0] + 1'b1;
+      1'b0: out[3:0] <= out[3:0] - 1'b1;
+    endcase
+  end
+end
+endmodule

@@ -1,0 +1,215 @@
+|nhancong_3bit
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+C[0] => C[0].IN1
+C[1] => C[1].IN1
+C[2] => C[2].IN1
+P[0] <= add6bit:u3.port2
+P[1] <= add6bit:u3.port2
+P[2] <= add6bit:u3.port2
+P[3] <= add6bit:u3.port2
+P[4] <= add6bit:u3.port2
+P[5] <= add6bit:u3.port2
+P[6] <= add6bit:u3.port2
+
+
+|nhancong_3bit|nhan3bit:u1
+a[0] => n0.IN0
+a[0] => n2.IN0
+a[0] => n6.IN0
+a[1] => n1.IN0
+a[1] => n4.IN0
+a[1] => n7.IN0
+a[2] => n3.IN0
+a[2] => n5.IN0
+a[2] => n8.IN0
+b[0] => n0.IN1
+b[0] => n1.IN1
+b[0] => n3.IN1
+b[1] => n2.IN1
+b[1] => n4.IN1
+b[1] => n5.IN1
+b[2] => n6.IN1
+b[2] => n7.IN1
+b[2] => n8.IN1
+p[0] <= n0.DB_MAX_OUTPUT_PORT_TYPE
+p[1] <= fa:u1.port3
+p[2] <= fa:u5.port3
+p[3] <= fa:u6.port3
+p[4] <= fa:u7.port3
+p[5] <= fa:u7.port4
+
+
+|nhancong_3bit|nhan3bit:u1|fa:u1
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhancong_3bit|nhan3bit:u1|fa:u2
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhancong_3bit|nhan3bit:u1|fa:u3
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhancong_3bit|nhan3bit:u1|fa:u5
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhancong_3bit|nhan3bit:u1|fa:u6
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhancong_3bit|nhan3bit:u1|fa:u7
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhancong_3bit|luythua:u2
+a[0] => Mult0.IN4
+a[0] => Mult0.IN5
+a[1] => Mult0.IN2
+a[1] => Mult0.IN3
+a[2] => Mult0.IN0
+a[2] => Mult0.IN1
+y[0] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+y[4] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+y[5] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhancong_3bit|add6bit:u3
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+b[4] => b[4].IN1
+b[5] => b[5].IN1
+y[0] <= fa:u1.port3
+y[1] <= fa:u2.port3
+y[2] <= fa:u3.port3
+y[3] <= fa:u4.port3
+y[4] <= fa:u5.port3
+y[5] <= fa:u6.port3
+y[6] <= fa:u6.port4
+
+
+|nhancong_3bit|add6bit:u3|fa:u1
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhancong_3bit|add6bit:u3|fa:u2
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhancong_3bit|add6bit:u3|fa:u3
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhancong_3bit|add6bit:u3|fa:u4
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhancong_3bit|add6bit:u3|fa:u5
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhancong_3bit|add6bit:u3|fa:u6
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+

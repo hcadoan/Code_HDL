@@ -1,0 +1,15 @@
+|fsm1011
+ck => current_state~1.DATAIN
+rs => current_state.OUTPUTSELECT
+rs => current_state.OUTPUTSELECT
+rs => current_state.OUTPUTSELECT
+rs => current_state.OUTPUTSELECT
+rs => current_state.OUTPUTSELECT
+x => next_state.s101.DATAB
+x => next_state.s1011.DATAB
+x => Selector1.IN2
+x => Selector2.IN1
+x => Selector0.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+

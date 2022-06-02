@@ -1,0 +1,10 @@
+{D:/HOANG CA/THUC HANH HDL/BAI TAP TH/demux14_4bit.v} {1 {vlog -work work {D:/HOANG CA/THUC HANH HDL/BAI TAP TH/demux14_4bit.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module demux14_4bit
+-- Compiling module demux14
+-- Compiling module TB_demux14_4bit
+
+Top level modules:
+	TB_demux14_4bit
+
+} {} {}}

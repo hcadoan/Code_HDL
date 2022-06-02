@@ -1,0 +1,10 @@
+{D:/HOANG CA/THUC HANH HDL/BAI TAP TH/bai2_ff.v} {1 {vlog -work work {D:/HOANG CA/THUC HANH HDL/BAI TAP TH/bai2_ff.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module bai2_ff
+-- Compiling module T_ff
+-- Compiling module TB_bai2_ff
+
+Top level modules:
+	TB_bai2_ff
+
+} {} {}}

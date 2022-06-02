@@ -1,0 +1,659 @@
+$comment
+	File created using the following command:
+		vcd file bcd3digit.msim.vcd -direction
+$end
+$date
+	Sat Jun 12 21:37:54 2021
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module bcd3digit_vlg_vec_tst $end
+$var reg 1 ! ck $end
+$var reg 1 " rs $end
+$var wire 1 # bcd0 [3] $end
+$var wire 1 $ bcd0 [2] $end
+$var wire 1 % bcd0 [1] $end
+$var wire 1 & bcd0 [0] $end
+$var wire 1 ' bcd1 [3] $end
+$var wire 1 ( bcd1 [2] $end
+$var wire 1 ) bcd1 [1] $end
+$var wire 1 * bcd1 [0] $end
+$var wire 1 + bcd2 [3] $end
+$var wire 1 , bcd2 [2] $end
+$var wire 1 - bcd2 [1] $end
+$var wire 1 . bcd2 [0] $end
+$var wire 1 / sampler $end
+$scope module i1 $end
+$var wire 1 0 gnd $end
+$var wire 1 1 vcc $end
+$var wire 1 2 unknown $end
+$var tri1 1 3 devclrn $end
+$var tri1 1 4 devpor $end
+$var tri1 1 5 devoe $end
+$var wire 1 6 ck~combout $end
+$var wire 1 7 ck~clkctrl_outclk $end
+$var wire 1 8 rs~combout $end
+$var wire 1 9 bcd2~0_combout $end
+$var wire 1 : bcd1~0_combout $end
+$var wire 1 ; bcd0~0_combout $end
+$var wire 1 < bcd0[0]~reg0_regout $end
+$var wire 1 = bcd0~1_combout $end
+$var wire 1 > bcd0[1]~reg0_regout $end
+$var wire 1 ? Add0~0_combout $end
+$var wire 1 @ bcd0~2_combout $end
+$var wire 1 A bcd0[2]~reg0_regout $end
+$var wire 1 B Add0~1_combout $end
+$var wire 1 C bcd0~3_combout $end
+$var wire 1 D bcd0[3]~reg0_regout $end
+$var wire 1 E bcd2[0]~2_combout $end
+$var wire 1 F bcd1[0]~1_combout $end
+$var wire 1 G bcd1[0]~reg0_regout $end
+$var wire 1 H bcd1~2_combout $end
+$var wire 1 I bcd1[1]~reg0_regout $end
+$var wire 1 J Add1~1_combout $end
+$var wire 1 K bcd1~4_combout $end
+$var wire 1 L bcd1[3]~reg0_regout $end
+$var wire 1 M bcd2[0]~1_combout $end
+$var wire 1 N bcd2[0]~3_combout $end
+$var wire 1 O bcd2[0]~reg0_regout $end
+$var wire 1 P bcd2~6_combout $end
+$var wire 1 Q bcd2[2]~reg0_regout $end
+$var wire 1 R Add2~0_combout $end
+$var wire 1 S bcd2~7_combout $end
+$var wire 1 T bcd2[3]~reg0_regout $end
+$var wire 1 U bcd2[0]~4_combout $end
+$var wire 1 V bcd2~5_combout $end
+$var wire 1 W bcd2[1]~reg0_regout $end
+$var wire 1 X Add1~0_combout $end
+$var wire 1 Y bcd1~3_combout $end
+$var wire 1 Z bcd1[2]~reg0_regout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0&
+0%
+0$
+0#
+0*
+0)
+0(
+0'
+0.
+0-
+0,
+0+
+x/
+00
+11
+x2
+13
+14
+15
+06
+07
+08
+19
+1:
+1;
+0<
+0=
+0>
+0?
+0@
+0A
+0B
+0C
+0D
+0E
+0F
+0G
+0H
+0I
+0J
+0K
+0L
+0M
+0N
+0O
+0P
+0Q
+0R
+0S
+0T
+1U
+0V
+0W
+0X
+0Y
+0Z
+$end
+#10000
+1!
+16
+17
+0/
+1<
+1=
+0;
+1&
+#20000
+0!
+06
+07
+1/
+#30000
+1!
+16
+17
+0/
+1>
+0<
+1;
+1%
+0&
+#40000
+0!
+06
+07
+1/
+#50000
+1!
+16
+17
+0/
+1<
+1?
+0=
+0;
+1&
+1@
+#60000
+0!
+06
+07
+1/
+#70000
+1!
+16
+17
+0/
+1A
+0>
+0<
+1;
+1$
+0%
+0&
+#80000
+0!
+06
+07
+1/
+#90000
+1!
+16
+17
+0/
+1<
+1=
+0;
+1&
+#100000
+0!
+06
+07
+1/
+#110000
+1!
+16
+17
+0/
+1>
+0<
+1;
+1%
+0&
+#120000
+0!
+06
+07
+1/
+#130000
+1!
+16
+17
+0/
+1<
+1B
+0?
+0=
+0;
+1&
+1C
+0@
+#140000
+0!
+06
+07
+1/
+#150000
+1!
+16
+17
+0/
+1D
+0A
+0>
+0<
+1;
+1#
+0$
+0%
+0&
+#160000
+0!
+06
+07
+1/
+#170000
+1!
+16
+17
+0/
+1<
+1E
+1=
+0;
+1&
+1F
+0C
+0=
+#180000
+0!
+06
+07
+1/
+#190000
+1!
+16
+17
+0/
+1G
+0D
+0<
+1H
+0:
+0E
+0B
+1;
+1*
+0#
+0&
+0F
+#200000
+0!
+06
+07
+1/
+#210000
+1!
+16
+17
+0/
+1<
+1=
+0;
+1&
+#220000
+0!
+06
+07
+1/
+#230000
+1!
+16
+17
+0/
+1>
+0<
+1;
+1%
+0&
+#240000
+0!
+06
+07
+1/
+#250000
+1!
+16
+17
+0/
+1<
+1?
+0=
+0;
+1&
+1@
+#260000
+0!
+06
+07
+1/
+#270000
+1!
+16
+17
+0/
+1A
+0>
+0<
+1;
+1$
+0%
+0&
+#280000
+0!
+06
+07
+1/
+#290000
+1!
+16
+17
+0/
+1<
+1=
+0;
+1&
+#300000
+0!
+06
+07
+1/
+#310000
+1!
+16
+17
+0/
+1>
+0<
+1;
+1%
+0&
+#320000
+0!
+06
+07
+1/
+#330000
+1!
+16
+17
+0/
+1<
+1B
+0?
+0=
+0;
+1&
+1C
+0@
+#340000
+0!
+06
+07
+1/
+#350000
+1!
+16
+17
+0/
+1D
+0A
+0>
+0<
+1;
+1#
+0$
+0%
+0&
+#360000
+0!
+06
+07
+1/
+#370000
+1!
+16
+17
+0/
+1<
+1E
+1=
+0;
+1&
+1F
+0C
+0=
+#380000
+0!
+06
+07
+1/
+#390000
+1!
+16
+17
+0/
+1I
+0G
+0D
+0<
+1:
+0E
+0B
+1;
+1)
+0*
+0#
+0&
+0F
+#400000
+0!
+06
+07
+1/
+#410000
+1!
+16
+17
+0/
+1<
+1=
+0;
+1&
+#420000
+0!
+06
+07
+1/
+#430000
+1!
+16
+17
+0/
+1>
+0<
+1;
+1%
+0&
+#440000
+0!
+06
+07
+1/
+#450000
+1!
+16
+17
+0/
+1<
+1?
+0=
+0;
+1&
+1@
+#460000
+0!
+06
+07
+1/
+#470000
+1!
+16
+17
+0/
+1A
+0>
+0<
+1;
+1$
+0%
+0&
+#480000
+0!
+06
+07
+1/
+#490000
+1!
+16
+17
+0/
+1<
+1=
+0;
+1&
+#500000
+0!
+06
+07
+1/
+#510000
+1!
+16
+17
+0/
+1>
+0<
+1;
+1%
+0&
+#520000
+0!
+06
+07
+1/
+#530000
+1!
+16
+17
+0/
+1<
+1B
+0?
+0=
+0;
+1&
+1C
+0@
+#540000
+0!
+06
+07
+1/
+#550000
+1!
+16
+17
+0/
+1D
+0A
+0>
+0<
+1;
+1#
+0$
+0%
+0&
+#560000
+0!
+06
+07
+1/
+#570000
+1!
+16
+17
+0/
+1<
+1E
+1=
+0;
+1&
+1F
+0C
+0=
+#580000
+0!
+06
+07
+1/
+#590000
+1!
+16
+17
+0/
+1G
+0D
+0<
+1X
+0H
+0:
+0E
+0B
+1;
+1*
+0#
+0&
+1Y
+0F
+#600000
+0!
+06
+07
+1/
+#610000
+1!
+16
+17
+0/
+1<
+1=
+0;
+1&
+#620000
+0!
+06
+07
+1/
+#1000000

@@ -1,0 +1,81 @@
+module bai4ck(ck,rs,x,y1,y2);
+parameter start = 4'b0000;
+parameter s1 = 4'b0001;
+parameter s10 = 4'b0010;
+parameter s101 = 4'b0011;
+parameter s1011 = 4'b0100;
+parameter s0 = 4'b0101;
+parameter s01 = 4'b0110;
+parameter s010 = 4'b0111;
+parameter s0101 = 4'b1000;
+
+input ck,rs,x;
+output reg y1,y2;
+reg [3:0]nexts, currents;
+
+always @(*)
+begin
+	case(currents)
+	//phat hien chuoi 1011
+	start:
+		begin
+			if(x==1) nexts = s1;
+			else nexts = s0;
+		end
+	s1:
+		begin
+			if(x==0) nexts = s10;
+			else nexts = s1;
+		end
+	s10:
+		begin
+			if(x==1) nexts = s101;
+			else nexts = s0;
+		end
+	s101:
+		begin
+			if(x==1) nexts = s1011;
+			else nexts = s010;
+		end
+	s1011:
+		begin
+			if(x==0) nexts = s10;
+			else nexts = s1;
+		end
+	//phat hien chuoi 0101	
+	s0:
+		begin
+			if(x==1) nexts = s01;
+			else nexts = s0;
+		end
+	s01:
+		begin
+			if(x==0) nexts = s010;
+			else nexts = s1;
+		end
+	s010:
+		begin
+			if(x==1) nexts = s0101;
+			else nexts = s0;
+		end
+	s0101:
+		begin
+			if(x==0) nexts = s010;
+			else nexts = s1011;
+		end
+	endcase
+end
+
+always @(posedge ck or posedge rs)
+begin
+	if(rs==1) currents <= start;
+	else currents <= nexts;
+end
+always @(*)
+begin
+	if(currents==s1011) y1 = 1'b1;
+	else y1 = 1'b0;
+	if(currents==s0101) y2 = 1'b1;
+	else y2 = 1'b0;
+end
+endmodule

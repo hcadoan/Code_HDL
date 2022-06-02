@@ -1,0 +1,107 @@
+//chú thích:
+//+ ngõ vào nối chồng: ALBin = A>B
+//                   AnBin = A<B
+//                   AbBin = A=B
+//+ ngõ ra:  ALB = A>B
+//         AnB = A<B
+//         AbB = A=B      
+       
+module IC7485(A0,A1,A2,A3,B0,B1,B2,B3,AlBin,AnBin,AbBin,AlB,AnB,AbB);
+input A0,A1,A2,A3,B0,B1,B2,B3,AlBin,AnBin,AbBin;
+output AlB,AnB,AbB;
+reg AlB,AnB,AbB;
+always@(*)
+begin
+if(A3>B3)
+begin
+AlB = 1;
+AnB = 0;
+AbB = 0;
+end
+else if(A3<B3)
+begin
+AlB = 0;
+AnB = 1;
+AbB = 0;
+end
+else
+begin
+if(A2>B2)
+begin
+AlB = 1;
+AnB = 0;
+AbB = 0;
+end
+else if(A2<B2)
+begin
+AlB = 0;
+AnB = 1;
+AbB = 0;
+end
+else
+begin
+if(A1>B1)
+begin
+AlB = 1;
+AnB = 0;
+AbB = 0;
+end
+else if(A1<B1)
+begin
+AlB = 0;
+AnB = 1;
+AbB = 0;
+end
+else
+begin
+if(A0>B0)
+begin
+AlB = 1;
+AnB = 0;
+AbB = 0;
+end
+else if(A0<B0)
+begin
+AlB = 0;
+AnB = 1;
+AbB = 0;
+end
+else
+begin
+if((AlBin==1)&(AnBin==0)&(AbBin==0))
+begin
+AlB = 1;
+AnB = 0;
+AbB = 0;
+end
+else if((AlBin==0)&(AnBin==1)&(AbBin==0))
+begin
+AlB = 0;
+AnB = 1;
+AbB = 0;
+end
+else if((AbBin==1)|(AlBin==0)&(AnBin==0)&(AbBin==1))
+begin
+AlB = 0;
+AnB = 0;
+AbB = 1;
+end
+else if((AlBin==1)&(AnBin==1)&(AbBin==0))
+begin
+AlB = 0;
+AnB = 0;
+AbB = 0;
+end
+else if((AlBin==0)&(AnBin==0)&(AbBin==0))
+begin
+AlB = 1;
+AnB = 1;
+AbB = 0;
+end
+end
+end
+end
+end
+end
+endmodule
+

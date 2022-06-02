@@ -1,0 +1,134 @@
+$comment
+	File created using the following command:
+		vcd file nhan4bit.msim.vcd -direction
+$end
+$date
+	Sun Apr 25 10:15:28 2021
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module nhan4bit_vlg_vec_tst $end
+$var reg 4 ! a [3:0] $end
+$var reg 4 " b [3:0] $end
+$var wire 1 # p [7] $end
+$var wire 1 $ p [6] $end
+$var wire 1 % p [5] $end
+$var wire 1 & p [4] $end
+$var wire 1 ' p [3] $end
+$var wire 1 ( p [2] $end
+$var wire 1 ) p [1] $end
+$var wire 1 * p [0] $end
+$var wire 1 + sampler $end
+$scope module i1 $end
+$var wire 1 , gnd $end
+$var wire 1 - vcc $end
+$var wire 1 . unknown $end
+$var tri1 1 / devclrn $end
+$var tri1 1 0 devpor $end
+$var tri1 1 1 devoe $end
+$var wire 1 2 fa2|co~0_combout $end
+$var wire 1 3 comb~2_combout $end
+$var wire 1 4 comb~3_combout $end
+$var wire 1 5 comb~5_combout $end
+$var wire 1 6 p~0_combout $end
+$var wire 1 7 fa1|co~0_combout $end
+$var wire 1 8 fa2|s~0_combout $end
+$var wire 1 9 fa2|s~1_combout $end
+$var wire 1 : fa5|co~2_combout $end
+$var wire 1 ; fa2|co~1_combout $end
+$var wire 1 < fa3|s~combout $end
+$var wire 1 = comb~0_combout $end
+$var wire 1 > fa6|s~combout $end
+$var wire 1 ? fa9|co~2_combout $end
+$var wire 1 @ fa6|co~0_combout $end
+$var wire 1 A fa3|co~0_combout $end
+$var wire 1 B comb~6_combout $end
+$var wire 1 C fa7|s~combout $end
+$var wire 1 D comb~1_combout $end
+$var wire 1 E comb~4_combout $end
+$var wire 1 F fa10|s~combout $end
+$var wire 1 G fa8|co~3_combout $end
+$var wire 1 H fa10|co~0_combout $end
+$var wire 1 I comb~7_combout $end
+$var wire 1 J fa7|co~0_combout $end
+$var wire 1 K fa11|s~combout $end
+$var wire 1 L comb~8_combout $end
+$var wire 1 M fa8|co~2_combout $end
+$var wire 1 N fa11|co~0_combout $end
+$var wire 1 O fa12|s~0_combout $end
+$var wire 1 P fa12|co~0_combout $end
+$var wire 1 Q a~combout [3] $end
+$var wire 1 R a~combout [2] $end
+$var wire 1 S a~combout [1] $end
+$var wire 1 T a~combout [0] $end
+$var wire 1 U b~combout [3] $end
+$var wire 1 V b~combout [2] $end
+$var wire 1 W b~combout [1] $end
+$var wire 1 X b~combout [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1111 !
+b1111 "
+1*
+0)
+0(
+0'
+0&
+1%
+1$
+1#
+x+
+0,
+1-
+x.
+1/
+10
+11
+12
+13
+14
+15
+16
+07
+18
+19
+0:
+1;
+1<
+1=
+1>
+0?
+1@
+1A
+1B
+0C
+1D
+1E
+0F
+0G
+1H
+1I
+1J
+1K
+1L
+1M
+1N
+1O
+1P
+1T
+1S
+1R
+1Q
+1X
+1W
+1V
+1U
+$end
+#1000000

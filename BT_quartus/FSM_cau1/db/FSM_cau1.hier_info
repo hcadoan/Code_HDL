@@ -1,0 +1,25 @@
+|FSM_cau1
+ck => c[0]~reg0.CLK
+ck => c[1]~reg0.CLK
+ck => c[2]~reg0.CLK
+rs => c[0]~reg0.ACLR
+rs => c[1]~reg0.ACLR
+rs => c[2]~reg0.ACLR
+s => Mux0.IN7
+s => Mux1.IN5
+s => Mux1.IN6
+s => Mux1.IN7
+s => Mux0.IN5
+s => Mux0.IN6
+s => Mux2.IN3
+s => Mux2.IN4
+s => Mux2.IN5
+s => Mux2.IN6
+s => Mux2.IN7
+y1 <= y1$latch.DB_MAX_OUTPUT_PORT_TYPE
+y2 <= y2$latch.DB_MAX_OUTPUT_PORT_TYPE
+c[0] <= c[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c[1] <= c[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c[2] <= c[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

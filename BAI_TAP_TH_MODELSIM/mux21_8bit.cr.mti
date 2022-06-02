@@ -1,0 +1,10 @@
+{D:/HOANG CA/THUC HANH HDL/BAI TAP TH/mux21_8bit.v} {1 {vlog -work work {D:/HOANG CA/THUC HANH HDL/BAI TAP TH/mux21_8bit.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module mux21_8bit
+-- Compiling module mux21
+-- Compiling module TB_mux21_8bit
+
+Top level modules:
+	TB_mux21_8bit
+
+} {} {}}

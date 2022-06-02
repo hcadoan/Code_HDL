@@ -1,0 +1,9 @@
+{D:/HOANG CA/THUC HANH HDL/BAI TAP TH/FSM9.v} {1 {vlog -work work {D:/HOANG CA/THUC HANH HDL/BAI TAP TH/FSM9.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module FSM9
+-- Compiling module TB_FSM9
+
+Top level modules:
+	TB_FSM9
+
+} {} {}}

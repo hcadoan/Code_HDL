@@ -1,0 +1,24 @@
+|cau3
+ck => out[0]~reg0.CLK
+ck => out[1]~reg0.CLK
+ck => out[2]~reg0.CLK
+ck => out[3]~reg0.CLK
+rs => out.OUTPUTSELECT
+rs => out.OUTPUTSELECT
+rs => out.OUTPUTSELECT
+rs => out.OUTPUTSELECT
+S => Decoder0.IN0
+load => out.OUTPUTSELECT
+load => out.OUTPUTSELECT
+load => out.OUTPUTSELECT
+load => out.OUTPUTSELECT
+data[0] => out.DATAB
+data[1] => out.DATAB
+data[2] => out.DATAB
+data[3] => out.DATAB
+out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

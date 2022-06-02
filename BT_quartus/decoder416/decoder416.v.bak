@@ -1,0 +1,42 @@
+module decoder4_16(A,B,C,D,E,Y);
+input A,B,C,D,E;
+output [15:0] Y;
+wire X;
+reg [15:0] Y;
+always@(*)
+begin
+if(E == 1)
+Y = 16'HFFFF;
+else
+begin
+not N(X,D);
+decoder3_8  U1(D,{C,B,A},Y[7:0]);
+decoder3_8  U2(X,{C,B,A},Y[15:8]);
+end
+end
+endmodule
+
+module decoder3_8(e,S,X);
+input e;
+input [2:0] S;
+output [7:0] X;
+reg [7:0] X;
+always @ (*)
+begin
+if(e == 1)
+X = 8’b00000000;
+else
+begin
+case(S)
+3’b000 : X = 8’b00000001;
+3’b001 : X = 8’b00000010;
+3’b010 : X = 8’b00000100;
+3’b011 : X = 8’b00001000;
+3’b100 : X = 8’b00010000;
+3’b101 : X = 8’b00100000;
+3’b110 : X = 8’b01000000;
+3’b111 : X = 8’b10000000;
+endcase
+end
+end
+endmodule

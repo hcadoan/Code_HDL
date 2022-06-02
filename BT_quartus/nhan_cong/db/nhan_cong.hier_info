@@ -1,0 +1,494 @@
+|nhan_cong
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+C[0] => C[0].IN1
+C[1] => C[1].IN1
+C[2] => C[2].IN1
+C[3] => C[3].IN1
+D[0] => D[0].IN1
+D[1] => D[1].IN1
+D[2] => D[2].IN1
+D[3] => D[3].IN1
+P[0] <= add8bit:u3.port2
+P[1] <= add8bit:u3.port2
+P[2] <= add8bit:u3.port2
+P[3] <= add8bit:u3.port2
+P[4] <= add8bit:u3.port2
+P[5] <= add8bit:u3.port2
+P[6] <= add8bit:u3.port2
+P[7] <= add8bit:u3.port2
+P[8] <= add8bit:u3.port2
+
+
+|nhan_cong|nhan4bit:u1
+a[0] => n0.IN0
+a[0] => n2.IN0
+a[0] => n8.IN0
+a[0] => n12.IN0
+a[1] => n1.IN0
+a[1] => n4.IN0
+a[1] => n9.IN0
+a[1] => n13.IN0
+a[2] => n3.IN0
+a[2] => n6.IN0
+a[2] => n10.IN0
+a[2] => n14.IN0
+a[3] => n5.IN0
+a[3] => n7.IN0
+a[3] => n11.IN0
+a[3] => n15.IN0
+b[0] => n0.IN1
+b[0] => n1.IN1
+b[0] => n3.IN1
+b[0] => n5.IN1
+b[1] => n2.IN1
+b[1] => n4.IN1
+b[1] => n6.IN1
+b[1] => n7.IN1
+b[2] => n8.IN1
+b[2] => n9.IN1
+b[2] => n10.IN1
+b[2] => n11.IN1
+b[3] => n12.IN1
+b[3] => n13.IN1
+b[3] => n14.IN1
+b[3] => n15.IN1
+p[0] <= n0.DB_MAX_OUTPUT_PORT_TYPE
+p[1] <= fa:u1.port3
+p[2] <= fa:u5.port3
+p[3] <= fa:u9.port3
+p[4] <= fa:u10.port3
+p[5] <= fa:u11.port3
+p[6] <= fa:u12.port3
+p[7] <= fa:u12.port4
+
+
+|nhan_cong|nhan4bit:u1|fa:u1
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan_cong|nhan4bit:u1|fa:u2
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan_cong|nhan4bit:u1|fa:u3
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan_cong|nhan4bit:u1|fa:u4
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan_cong|nhan4bit:u1|fa:u5
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan_cong|nhan4bit:u1|fa:u6
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan_cong|nhan4bit:u1|fa:u7
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan_cong|nhan4bit:u1|fa:u8
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan_cong|nhan4bit:u1|fa:u9
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan_cong|nhan4bit:u1|fa:u10
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan_cong|nhan4bit:u1|fa:u11
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan_cong|nhan4bit:u1|fa:u12
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan_cong|nhan4bit:u2
+a[0] => n0.IN0
+a[0] => n2.IN0
+a[0] => n8.IN0
+a[0] => n12.IN0
+a[1] => n1.IN0
+a[1] => n4.IN0
+a[1] => n9.IN0
+a[1] => n13.IN0
+a[2] => n3.IN0
+a[2] => n6.IN0
+a[2] => n10.IN0
+a[2] => n14.IN0
+a[3] => n5.IN0
+a[3] => n7.IN0
+a[3] => n11.IN0
+a[3] => n15.IN0
+b[0] => n0.IN1
+b[0] => n1.IN1
+b[0] => n3.IN1
+b[0] => n5.IN1
+b[1] => n2.IN1
+b[1] => n4.IN1
+b[1] => n6.IN1
+b[1] => n7.IN1
+b[2] => n8.IN1
+b[2] => n9.IN1
+b[2] => n10.IN1
+b[2] => n11.IN1
+b[3] => n12.IN1
+b[3] => n13.IN1
+b[3] => n14.IN1
+b[3] => n15.IN1
+p[0] <= n0.DB_MAX_OUTPUT_PORT_TYPE
+p[1] <= fa:u1.port3
+p[2] <= fa:u5.port3
+p[3] <= fa:u9.port3
+p[4] <= fa:u10.port3
+p[5] <= fa:u11.port3
+p[6] <= fa:u12.port3
+p[7] <= fa:u12.port4
+
+
+|nhan_cong|nhan4bit:u2|fa:u1
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan_cong|nhan4bit:u2|fa:u2
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan_cong|nhan4bit:u2|fa:u3
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan_cong|nhan4bit:u2|fa:u4
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan_cong|nhan4bit:u2|fa:u5
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan_cong|nhan4bit:u2|fa:u6
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan_cong|nhan4bit:u2|fa:u7
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan_cong|nhan4bit:u2|fa:u8
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan_cong|nhan4bit:u2|fa:u9
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan_cong|nhan4bit:u2|fa:u10
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan_cong|nhan4bit:u2|fa:u11
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan_cong|nhan4bit:u2|fa:u12
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan_cong|add8bit:u3
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+a[6] => a[6].IN1
+a[7] => a[7].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+b[4] => b[4].IN1
+b[5] => b[5].IN1
+b[6] => b[6].IN1
+b[7] => b[7].IN1
+out[0] <= fa:u1.port3
+out[1] <= fa:u2.port3
+out[2] <= fa:u3.port3
+out[3] <= fa:u4.port3
+out[4] <= fa:u5.port3
+out[5] <= fa:u6.port3
+out[6] <= fa:u7.port3
+out[7] <= fa:u8.port3
+out[8] <= fa:u8.port4
+
+
+|nhan_cong|add8bit:u3|fa:u1
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan_cong|add8bit:u3|fa:u2
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan_cong|add8bit:u3|fa:u3
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan_cong|add8bit:u3|fa:u4
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan_cong|add8bit:u3|fa:u5
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan_cong|add8bit:u3|fa:u6
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan_cong|add8bit:u3|fa:u7
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan_cong|add8bit:u3|fa:u8
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+

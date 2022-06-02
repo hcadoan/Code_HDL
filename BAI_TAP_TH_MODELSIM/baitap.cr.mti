@@ -1,0 +1,9 @@
+{D:/HOANG CA/THUC HANH HDL/BAI TAP TH/baitap.v} {1 {vlog -work work {D:/HOANG CA/THUC HANH HDL/BAI TAP TH/baitap.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module baitap
+-- Compiling module TB_baitap
+
+Top level modules:
+	TB_baitap
+
+} {} {}}

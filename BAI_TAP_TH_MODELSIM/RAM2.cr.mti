@@ -1,0 +1,11 @@
+{D:/HOANG CA/THUC HANH HDL/BAI TAP TH/RAM2.v} {1 {vlog -work work {D:\HOANG CA\THUC HANH HDL\BAI TAP TH\RAM2.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module RAM2
+-- Compiling module add4bit
+-- Compiling module RAM_2
+-- Compiling module TB_RAM2
+
+Top level modules:
+	TB_RAM2
+
+} {} {}}

@@ -1,0 +1,26 @@
+|cau5
+x => Mux2.IN4
+x => Mux2.IN5
+x => Mux1.IN6
+x => Mux2.IN6
+x => Mux0.IN6
+x => Mux2.IN7
+x => Mux0.IN7
+x => Mux1.IN7
+x => Mux0.IN3
+x => Mux0.IN4
+x => Mux0.IN5
+x => Mux1.IN5
+ck => ht[0]~reg0.CLK
+ck => ht[1]~reg0.CLK
+ck => ht[2]~reg0.CLK
+rs => ht[0]~reg0.ACLR
+rs => ht[1]~reg0.ACLR
+rs => ht[2]~reg0.ACLR
+y1 <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+y2 <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
+ht[0] <= ht[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ht[1] <= ht[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ht[2] <= ht[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

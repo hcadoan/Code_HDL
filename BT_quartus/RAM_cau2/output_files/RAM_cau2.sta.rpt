@@ -1,0 +1,1011 @@
+TimeQuest Timing Analyzer report for RAM_cau2
+Mon Nov 22 23:20:05 2021
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clk'
+ 12. Slow Model Hold: 'clk'
+ 13. Slow Model Minimum Pulse Width: 'clk'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'clk'
+ 24. Fast Model Hold: 'clk'
+ 25. Fast Model Minimum Pulse Width: 'clk'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                       ;
++--------------------+----------------------------------------------------+
+; Quartus II Version ; Version 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
+; Revision Name      ; RAM_cau2                                           ;
+; Device Family      ; Cyclone II                                         ;
+; Device Name        ; EP2C35F672C6                                       ;
+; Timing Models      ; Final                                              ;
+; Delay Model        ; Combined                                           ;
+; Rise/Fall Delays   ; Unavailable                                        ;
++--------------------+----------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 369.41 MHz ; 369.41 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -1.707 ; -6.425        ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 1.182 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.380 ; -69.380               ;
++-------+--------+-----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                           ;
++--------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node      ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
+; -1.707 ; RAM:u1|sram~33 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 1.000        ; -0.002     ; 2.741      ;
+; -1.657 ; RAM:u1|sram~42 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 1.000        ; -0.001     ; 2.692      ;
+; -1.574 ; RAM:u1|sram~46 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 1.000        ; -0.002     ; 2.608      ;
+; -1.545 ; RAM:u1|sram~24 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 1.000        ; -0.004     ; 2.577      ;
+; -1.543 ; RAM:u1|sram~56 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 1.000        ; -0.004     ; 2.575      ;
+; -1.538 ; RAM:u1|sram~10 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 1.000        ; -0.001     ; 2.573      ;
+; -1.516 ; RAM:u1|sram~27 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 1.000        ; -0.001     ; 2.551      ;
+; -1.490 ; RAM:u1|sram~4  ; RAM:u1|dataOut[0] ; clk          ; clk         ; 1.000        ; -0.002     ; 2.524      ;
+; -1.463 ; RAM:u1|sram~36 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 1.000        ; -0.005     ; 2.494      ;
+; -1.462 ; RAM:u1|sram~39 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 1.000        ; -0.002     ; 2.496      ;
+; -1.461 ; RAM:u1|sram~14 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 1.000        ; -0.002     ; 2.495      ;
+; -1.459 ; RAM:u1|sram~28 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 1.000        ; -0.004     ; 2.491      ;
+; -1.456 ; RAM:u1|sram~19 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.494      ;
+; -1.442 ; RAM:u1|sram~59 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 1.000        ; -0.001     ; 2.477      ;
+; -1.441 ; RAM:u1|sram~21 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.479      ;
+; -1.387 ; RAM:u1|sram~40 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 1.000        ; -0.004     ; 2.419      ;
+; -1.357 ; RAM:u1|sram~0  ; RAM:u1|dataOut[0] ; clk          ; clk         ; 1.000        ; -0.002     ; 2.391      ;
+; -1.356 ; RAM:u1|sram~35 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 1.000        ; -0.002     ; 2.390      ;
+; -1.351 ; RAM:u1|sram~34 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 1.000        ; -0.002     ; 2.385      ;
+; -1.350 ; RAM:u1|sram~29 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 1.000        ; -0.001     ; 2.385      ;
+; -1.329 ; RAM:u1|sram~32 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 1.000        ; -0.005     ; 2.360      ;
+; -1.292 ; RAM:u1|sram~57 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 1.000        ; -0.001     ; 2.327      ;
+; -1.284 ; RAM:u1|sram~22 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.320      ;
+; -1.266 ; RAM:u1|sram~61 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 1.000        ; -0.001     ; 2.301      ;
+; -1.259 ; RAM:u1|sram~17 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.297      ;
+; -1.252 ; RAM:u1|sram~11 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 1.000        ; -0.001     ; 2.287      ;
+; -1.247 ; RAM:u1|sram~37 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 1.000        ; -0.002     ; 2.281      ;
+; -1.234 ; RAM:u1|sram~44 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 1.000        ; -0.005     ; 2.265      ;
+; -1.227 ; RAM:u1|sram~41 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 1.000        ; -0.001     ; 2.262      ;
+; -1.164 ; RAM:u1|sram~12 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 1.000        ; -0.001     ; 2.199      ;
+; -1.162 ; RAM:u1|sram~25 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 1.000        ; -0.001     ; 2.197      ;
+; -1.154 ; RAM:u1|sram~18 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.190      ;
+; -1.146 ; RAM:u1|sram~31 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 1.000        ; -0.001     ; 2.181      ;
+; -1.145 ; RAM:u1|sram~3  ; RAM:u1|dataOut[3] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.182      ;
+; -1.135 ; RAM:u1|sram~5  ; RAM:u1|dataOut[1] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.172      ;
+; -1.130 ; RAM:u1|sram~54 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.166      ;
+; -1.130 ; RAM:u1|sram~53 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.166      ;
+; -1.099 ; RAM:u1|sram~9  ; RAM:u1|dataOut[1] ; clk          ; clk         ; 1.000        ; -0.001     ; 2.134      ;
+; -1.031 ; RAM:u1|sram~47 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 1.000        ; -0.002     ; 2.065      ;
+; -1.027 ; RAM:u1|sram~13 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 1.000        ; -0.002     ; 2.061      ;
+; -1.024 ; RAM:u1|sram~30 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 1.000        ; -0.001     ; 2.059      ;
+; -0.994 ; RAM:u1|sram~60 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 1.000        ; -0.003     ; 2.027      ;
+; -0.989 ; RAM:u1|sram~16 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 1.000        ; -0.001     ; 2.024      ;
+; -0.986 ; RAM:u1|sram~2  ; RAM:u1|dataOut[2] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.023      ;
+; -0.980 ; RAM:u1|sram~55 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.016      ;
+; -0.962 ; RAM:u1|sram~38 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.996      ;
+; -0.961 ; RAM:u1|sram~48 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 1.000        ; -0.003     ; 1.994      ;
+; -0.943 ; RAM:u1|sram~1  ; RAM:u1|dataOut[1] ; clk          ; clk         ; 1.000        ; 0.001      ; 1.980      ;
+; -0.939 ; RAM:u1|sram~63 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 1.000        ; -0.001     ; 1.974      ;
+; -0.916 ; RAM:u1|sram~23 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 1.000        ; 0.002      ; 1.954      ;
+; -0.907 ; RAM:u1|sram~62 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.943      ;
+; -0.905 ; RAM:u1|sram~15 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.939      ;
+; -0.873 ; RAM:u1|sram~58 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 1.000        ; -0.001     ; 1.908      ;
+; -0.859 ; RAM:u1|sram~43 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 1.000        ; -0.001     ; 1.894      ;
+; -0.851 ; RAM:u1|sram~50 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.887      ;
+; -0.826 ; RAM:u1|sram~52 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 1.000        ; -0.003     ; 1.859      ;
+; -0.684 ; RAM:u1|sram~7  ; RAM:u1|dataOut[3] ; clk          ; clk         ; 1.000        ; 0.001      ; 1.721      ;
+; -0.638 ; RAM:u1|sram~45 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.672      ;
+; -0.622 ; RAM:u1|sram~26 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 1.000        ; -0.001     ; 1.657      ;
+; -0.595 ; RAM:u1|sram~20 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 1.000        ; -0.001     ; 1.630      ;
+; -0.594 ; RAM:u1|sram~6  ; RAM:u1|dataOut[2] ; clk          ; clk         ; 1.000        ; 0.001      ; 1.631      ;
+; -0.537 ; RAM:u1|sram~8  ; RAM:u1|dataOut[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.573      ;
+; -0.535 ; RAM:u1|sram~51 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.571      ;
+; -0.412 ; RAM:u1|sram~49 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.448      ;
++--------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                           ;
++-------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node      ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
+; 1.182 ; RAM:u1|sram~49 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.448      ;
+; 1.305 ; RAM:u1|sram~51 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.571      ;
+; 1.307 ; RAM:u1|sram~8  ; RAM:u1|dataOut[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.573      ;
+; 1.364 ; RAM:u1|sram~6  ; RAM:u1|dataOut[2] ; clk          ; clk         ; 0.000        ; 0.001      ; 1.631      ;
+; 1.365 ; RAM:u1|sram~20 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 0.000        ; -0.001     ; 1.630      ;
+; 1.392 ; RAM:u1|sram~26 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 0.000        ; -0.001     ; 1.657      ;
+; 1.408 ; RAM:u1|sram~45 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 0.000        ; -0.002     ; 1.672      ;
+; 1.454 ; RAM:u1|sram~7  ; RAM:u1|dataOut[3] ; clk          ; clk         ; 0.000        ; 0.001      ; 1.721      ;
+; 1.596 ; RAM:u1|sram~52 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 0.000        ; -0.003     ; 1.859      ;
+; 1.621 ; RAM:u1|sram~50 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.887      ;
+; 1.629 ; RAM:u1|sram~43 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 0.000        ; -0.001     ; 1.894      ;
+; 1.643 ; RAM:u1|sram~58 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 0.000        ; -0.001     ; 1.908      ;
+; 1.675 ; RAM:u1|sram~15 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 0.000        ; -0.002     ; 1.939      ;
+; 1.677 ; RAM:u1|sram~62 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.943      ;
+; 1.686 ; RAM:u1|sram~23 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 0.000        ; 0.002      ; 1.954      ;
+; 1.709 ; RAM:u1|sram~63 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 0.000        ; -0.001     ; 1.974      ;
+; 1.713 ; RAM:u1|sram~1  ; RAM:u1|dataOut[1] ; clk          ; clk         ; 0.000        ; 0.001      ; 1.980      ;
+; 1.731 ; RAM:u1|sram~48 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 0.000        ; -0.003     ; 1.994      ;
+; 1.732 ; RAM:u1|sram~38 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 0.000        ; -0.002     ; 1.996      ;
+; 1.750 ; RAM:u1|sram~55 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.016      ;
+; 1.756 ; RAM:u1|sram~2  ; RAM:u1|dataOut[2] ; clk          ; clk         ; 0.000        ; 0.001      ; 2.023      ;
+; 1.759 ; RAM:u1|sram~16 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 0.000        ; -0.001     ; 2.024      ;
+; 1.764 ; RAM:u1|sram~60 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 0.000        ; -0.003     ; 2.027      ;
+; 1.794 ; RAM:u1|sram~30 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 0.000        ; -0.001     ; 2.059      ;
+; 1.797 ; RAM:u1|sram~13 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 0.000        ; -0.002     ; 2.061      ;
+; 1.801 ; RAM:u1|sram~47 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 0.000        ; -0.002     ; 2.065      ;
+; 1.869 ; RAM:u1|sram~9  ; RAM:u1|dataOut[1] ; clk          ; clk         ; 0.000        ; -0.001     ; 2.134      ;
+; 1.900 ; RAM:u1|sram~53 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.166      ;
+; 1.900 ; RAM:u1|sram~54 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.166      ;
+; 1.905 ; RAM:u1|sram~5  ; RAM:u1|dataOut[1] ; clk          ; clk         ; 0.000        ; 0.001      ; 2.172      ;
+; 1.915 ; RAM:u1|sram~3  ; RAM:u1|dataOut[3] ; clk          ; clk         ; 0.000        ; 0.001      ; 2.182      ;
+; 1.916 ; RAM:u1|sram~31 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 0.000        ; -0.001     ; 2.181      ;
+; 1.924 ; RAM:u1|sram~18 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.190      ;
+; 1.932 ; RAM:u1|sram~25 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 0.000        ; -0.001     ; 2.197      ;
+; 1.934 ; RAM:u1|sram~12 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 0.000        ; -0.001     ; 2.199      ;
+; 1.997 ; RAM:u1|sram~41 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 0.000        ; -0.001     ; 2.262      ;
+; 2.004 ; RAM:u1|sram~44 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 0.000        ; -0.005     ; 2.265      ;
+; 2.017 ; RAM:u1|sram~37 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 0.000        ; -0.002     ; 2.281      ;
+; 2.022 ; RAM:u1|sram~11 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 0.000        ; -0.001     ; 2.287      ;
+; 2.029 ; RAM:u1|sram~17 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 0.000        ; 0.002      ; 2.297      ;
+; 2.036 ; RAM:u1|sram~61 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 0.000        ; -0.001     ; 2.301      ;
+; 2.054 ; RAM:u1|sram~22 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.320      ;
+; 2.062 ; RAM:u1|sram~57 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 0.000        ; -0.001     ; 2.327      ;
+; 2.099 ; RAM:u1|sram~32 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 0.000        ; -0.005     ; 2.360      ;
+; 2.120 ; RAM:u1|sram~29 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 0.000        ; -0.001     ; 2.385      ;
+; 2.121 ; RAM:u1|sram~34 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 0.000        ; -0.002     ; 2.385      ;
+; 2.126 ; RAM:u1|sram~35 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 0.000        ; -0.002     ; 2.390      ;
+; 2.127 ; RAM:u1|sram~0  ; RAM:u1|dataOut[0] ; clk          ; clk         ; 0.000        ; -0.002     ; 2.391      ;
+; 2.157 ; RAM:u1|sram~40 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 0.000        ; -0.004     ; 2.419      ;
+; 2.211 ; RAM:u1|sram~21 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 0.000        ; 0.002      ; 2.479      ;
+; 2.212 ; RAM:u1|sram~59 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 0.000        ; -0.001     ; 2.477      ;
+; 2.226 ; RAM:u1|sram~19 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 0.000        ; 0.002      ; 2.494      ;
+; 2.229 ; RAM:u1|sram~28 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 0.000        ; -0.004     ; 2.491      ;
+; 2.231 ; RAM:u1|sram~14 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 0.000        ; -0.002     ; 2.495      ;
+; 2.232 ; RAM:u1|sram~39 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 0.000        ; -0.002     ; 2.496      ;
+; 2.233 ; RAM:u1|sram~36 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 0.000        ; -0.005     ; 2.494      ;
+; 2.260 ; RAM:u1|sram~4  ; RAM:u1|dataOut[0] ; clk          ; clk         ; 0.000        ; -0.002     ; 2.524      ;
+; 2.286 ; RAM:u1|sram~27 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 0.000        ; -0.001     ; 2.551      ;
+; 2.308 ; RAM:u1|sram~10 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 0.000        ; -0.001     ; 2.573      ;
+; 2.313 ; RAM:u1|sram~56 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 0.000        ; -0.004     ; 2.575      ;
+; 2.315 ; RAM:u1|sram~24 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 0.000        ; -0.004     ; 2.577      ;
+; 2.344 ; RAM:u1|sram~46 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 0.000        ; -0.002     ; 2.608      ;
+; 2.427 ; RAM:u1|sram~42 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 0.000        ; -0.001     ; 2.692      ;
+; 2.477 ; RAM:u1|sram~33 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 0.000        ; -0.002     ; 2.741      ;
++-------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                              ;
++--------+--------------+----------------+------------------+-------+------------+-------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target            ;
++--------+--------------+----------------+------------------+-------+------------+-------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|dataOut[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|dataOut[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|dataOut[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|dataOut[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|dataOut[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|dataOut[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|dataOut[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|dataOut[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~0     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~0     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~1     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~1     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~10    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~10    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~11    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~11    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~12    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~12    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~13    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~13    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~14    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~14    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~15    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~15    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~16    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~16    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~17    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~17    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~18    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~18    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~19    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~19    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~2     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~2     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~20    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~20    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~21    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~21    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~22    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~22    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~23    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~23    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~24    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~24    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~25    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~25    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~26    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~26    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~27    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~27    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~28    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~28    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~29    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~29    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~3     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~3     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~30    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~30    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~31    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~31    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~32    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~32    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~33    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~33    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~34    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~34    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~35    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~35    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~36    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~36    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~37    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~37    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~38    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~38    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~39    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~39    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~4     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~4     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~40    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~40    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~41    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~41    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~42    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~42    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~43    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~43    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~44    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~44    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~45    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~45    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~46    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~46    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~47    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~47    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~48    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~48    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~49    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~49    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~5     ;
++--------+--------------+----------------+------------------+-------+------------+-------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; CS        ; clk        ; 5.279 ; 5.279 ; Rise       ; clk             ;
+; WE        ; clk        ; 5.221 ; 5.221 ; Rise       ; clk             ;
+; a[*]      ; clk        ; 5.482 ; 5.482 ; Rise       ; clk             ;
+;  a[0]     ; clk        ; 5.482 ; 5.482 ; Rise       ; clk             ;
+;  a[1]     ; clk        ; 5.197 ; 5.197 ; Rise       ; clk             ;
+;  a[2]     ; clk        ; 5.079 ; 5.079 ; Rise       ; clk             ;
+;  a[3]     ; clk        ; 4.930 ; 4.930 ; Rise       ; clk             ;
+; addr[*]   ; clk        ; 5.944 ; 5.944 ; Rise       ; clk             ;
+;  addr[0]  ; clk        ; 2.597 ; 2.597 ; Rise       ; clk             ;
+;  addr[1]  ; clk        ; 2.439 ; 2.439 ; Rise       ; clk             ;
+;  addr[2]  ; clk        ; 5.944 ; 5.944 ; Rise       ; clk             ;
+;  addr[3]  ; clk        ; 5.793 ; 5.793 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; CS        ; clk        ; -3.893 ; -3.893 ; Rise       ; clk             ;
+; WE        ; clk        ; -3.404 ; -3.404 ; Rise       ; clk             ;
+; a[*]      ; clk        ; -2.953 ; -2.953 ; Rise       ; clk             ;
+;  a[0]     ; clk        ; -2.953 ; -2.953 ; Rise       ; clk             ;
+;  a[1]     ; clk        ; -3.779 ; -3.779 ; Rise       ; clk             ;
+;  a[2]     ; clk        ; -3.662 ; -3.662 ; Rise       ; clk             ;
+;  a[3]     ; clk        ; -3.722 ; -3.722 ; Rise       ; clk             ;
+; addr[*]   ; clk        ; -0.010 ; -0.010 ; Rise       ; clk             ;
+;  addr[0]  ; clk        ; -0.010 ; -0.010 ; Rise       ; clk             ;
+;  addr[1]  ; clk        ; -0.413 ; -0.413 ; Rise       ; clk             ;
+;  addr[2]  ; clk        ; -3.606 ; -3.606 ; Rise       ; clk             ;
+;  addr[3]  ; clk        ; -3.795 ; -3.795 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; dataOut[*]  ; clk        ; 6.392 ; 6.392 ; Rise       ; clk             ;
+;  dataOut[0] ; clk        ; 6.381 ; 6.381 ; Rise       ; clk             ;
+;  dataOut[1] ; clk        ; 6.383 ; 6.383 ; Rise       ; clk             ;
+;  dataOut[2] ; clk        ; 6.389 ; 6.389 ; Rise       ; clk             ;
+;  dataOut[3] ; clk        ; 6.392 ; 6.392 ; Rise       ; clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; dataOut[*]  ; clk        ; 6.381 ; 6.381 ; Rise       ; clk             ;
+;  dataOut[0] ; clk        ; 6.381 ; 6.381 ; Rise       ; clk             ;
+;  dataOut[1] ; clk        ; 6.383 ; 6.383 ; Rise       ; clk             ;
+;  dataOut[2] ; clk        ; 6.389 ; 6.389 ; Rise       ; clk             ;
+;  dataOut[3] ; clk        ; 6.392 ; 6.392 ; Rise       ; clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -0.206 ; -0.628        ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.546 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.380 ; -69.380               ;
++-------+--------+-----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                           ;
++--------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node      ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
+; -0.206 ; RAM:u1|sram~33 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 1.000        ; -0.003     ; 1.235      ;
+; -0.163 ; RAM:u1|sram~42 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.193      ;
+; -0.137 ; RAM:u1|sram~56 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 1.000        ; -0.005     ; 1.164      ;
+; -0.132 ; RAM:u1|sram~46 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 1.000        ; -0.003     ; 1.161      ;
+; -0.129 ; RAM:u1|sram~24 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 1.000        ; -0.005     ; 1.156      ;
+; -0.122 ; RAM:u1|sram~27 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.152      ;
+; -0.119 ; RAM:u1|sram~10 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.149      ;
+; -0.111 ; RAM:u1|sram~36 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 1.000        ; -0.006     ; 1.137      ;
+; -0.101 ; RAM:u1|sram~39 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 1.000        ; -0.003     ; 1.130      ;
+; -0.092 ; RAM:u1|sram~28 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 1.000        ; -0.003     ; 1.121      ;
+; -0.091 ; RAM:u1|sram~4  ; RAM:u1|dataOut[0] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.121      ;
+; -0.089 ; RAM:u1|sram~59 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.119      ;
+; -0.089 ; RAM:u1|sram~14 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 1.000        ; -0.001     ; 1.120      ;
+; -0.083 ; RAM:u1|sram~32 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 1.000        ; -0.006     ; 1.109      ;
+; -0.077 ; RAM:u1|sram~19 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 1.000        ; 0.002      ; 1.111      ;
+; -0.070 ; RAM:u1|sram~40 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 1.000        ; -0.005     ; 1.097      ;
+; -0.067 ; RAM:u1|sram~21 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 1.000        ; 0.002      ; 1.101      ;
+; -0.064 ; RAM:u1|sram~0  ; RAM:u1|dataOut[0] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.094      ;
+; -0.062 ; RAM:u1|sram~34 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 1.000        ; -0.003     ; 1.091      ;
+; -0.047 ; RAM:u1|sram~29 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.077      ;
+; -0.041 ; RAM:u1|sram~35 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 1.000        ; -0.003     ; 1.070      ;
+; -0.031 ; RAM:u1|sram~57 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.061      ;
+; -0.031 ; RAM:u1|sram~11 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.061      ;
+; -0.016 ; RAM:u1|sram~61 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.046      ;
+; -0.015 ; RAM:u1|sram~22 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 1.000        ; 0.001      ; 1.048      ;
+; -0.002 ; RAM:u1|sram~17 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 1.000        ; 0.002      ; 1.036      ;
+; 0.002  ; RAM:u1|sram~44 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 1.000        ; -0.004     ; 1.026      ;
+; 0.007  ; RAM:u1|sram~37 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 1.000        ; -0.003     ; 1.022      ;
+; 0.010  ; RAM:u1|sram~18 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 1.000        ; 0.001      ; 1.023      ;
+; 0.011  ; RAM:u1|sram~41 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.019      ;
+; 0.028  ; RAM:u1|sram~3  ; RAM:u1|dataOut[3] ; clk          ; clk         ; 1.000        ; 0.001      ; 1.005      ;
+; 0.033  ; RAM:u1|sram~5  ; RAM:u1|dataOut[1] ; clk          ; clk         ; 1.000        ; 0.001      ; 1.000      ;
+; 0.034  ; RAM:u1|sram~9  ; RAM:u1|dataOut[1] ; clk          ; clk         ; 1.000        ; -0.002     ; 0.996      ;
+; 0.036  ; RAM:u1|sram~25 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 1.000        ; -0.002     ; 0.994      ;
+; 0.042  ; RAM:u1|sram~31 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 1.000        ; -0.002     ; 0.988      ;
+; 0.052  ; RAM:u1|sram~12 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 1.000        ; -0.001     ; 0.979      ;
+; 0.056  ; RAM:u1|sram~54 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 1.000        ; -0.001     ; 0.975      ;
+; 0.060  ; RAM:u1|sram~53 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 1.000        ; -0.001     ; 0.971      ;
+; 0.067  ; RAM:u1|sram~13 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 1.000        ; -0.001     ; 0.964      ;
+; 0.091  ; RAM:u1|sram~16 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 1.000        ; -0.001     ; 0.940      ;
+; 0.097  ; RAM:u1|sram~2  ; RAM:u1|dataOut[2] ; clk          ; clk         ; 1.000        ; 0.001      ; 0.936      ;
+; 0.098  ; RAM:u1|sram~38 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 1.000        ; -0.003     ; 0.931      ;
+; 0.098  ; RAM:u1|sram~48 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 1.000        ; -0.003     ; 0.931      ;
+; 0.099  ; RAM:u1|sram~30 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.933      ;
+; 0.101  ; RAM:u1|sram~47 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 1.000        ; -0.001     ; 0.930      ;
+; 0.104  ; RAM:u1|sram~1  ; RAM:u1|dataOut[1] ; clk          ; clk         ; 1.000        ; 0.001      ; 0.929      ;
+; 0.110  ; RAM:u1|sram~55 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 1.000        ; -0.001     ; 0.921      ;
+; 0.112  ; RAM:u1|sram~60 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 1.000        ; -0.004     ; 0.916      ;
+; 0.124  ; RAM:u1|sram~15 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 1.000        ; -0.001     ; 0.907      ;
+; 0.126  ; RAM:u1|sram~63 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 1.000        ; -0.002     ; 0.904      ;
+; 0.131  ; RAM:u1|sram~43 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 1.000        ; -0.002     ; 0.899      ;
+; 0.144  ; RAM:u1|sram~23 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 1.000        ; 0.002      ; 0.890      ;
+; 0.150  ; RAM:u1|sram~62 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 1.000        ; -0.001     ; 0.881      ;
+; 0.156  ; RAM:u1|sram~50 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.876      ;
+; 0.160  ; RAM:u1|sram~58 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 1.000        ; -0.002     ; 0.870      ;
+; 0.185  ; RAM:u1|sram~52 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 1.000        ; -0.004     ; 0.843      ;
+; 0.217  ; RAM:u1|sram~7  ; RAM:u1|dataOut[3] ; clk          ; clk         ; 1.000        ; 0.001      ; 0.816      ;
+; 0.227  ; RAM:u1|sram~45 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 1.000        ; -0.001     ; 0.804      ;
+; 0.241  ; RAM:u1|sram~26 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.791      ;
+; 0.255  ; RAM:u1|sram~20 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 1.000        ; -0.001     ; 0.776      ;
+; 0.259  ; RAM:u1|sram~6  ; RAM:u1|dataOut[2] ; clk          ; clk         ; 1.000        ; 0.001      ; 0.774      ;
+; 0.290  ; RAM:u1|sram~51 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.742      ;
+; 0.291  ; RAM:u1|sram~8  ; RAM:u1|dataOut[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.741      ;
+; 0.334  ; RAM:u1|sram~49 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.698      ;
++--------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                           ;
++-------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node      ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
+; 0.546 ; RAM:u1|sram~49 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.698      ;
+; 0.589 ; RAM:u1|sram~8  ; RAM:u1|dataOut[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.741      ;
+; 0.590 ; RAM:u1|sram~51 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.742      ;
+; 0.621 ; RAM:u1|sram~6  ; RAM:u1|dataOut[2] ; clk          ; clk         ; 0.000        ; 0.001      ; 0.774      ;
+; 0.625 ; RAM:u1|sram~20 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 0.000        ; -0.001     ; 0.776      ;
+; 0.639 ; RAM:u1|sram~26 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.791      ;
+; 0.653 ; RAM:u1|sram~45 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 0.000        ; -0.001     ; 0.804      ;
+; 0.663 ; RAM:u1|sram~7  ; RAM:u1|dataOut[3] ; clk          ; clk         ; 0.000        ; 0.001      ; 0.816      ;
+; 0.695 ; RAM:u1|sram~52 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 0.000        ; -0.004     ; 0.843      ;
+; 0.720 ; RAM:u1|sram~58 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 0.000        ; -0.002     ; 0.870      ;
+; 0.724 ; RAM:u1|sram~50 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.876      ;
+; 0.730 ; RAM:u1|sram~62 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 0.000        ; -0.001     ; 0.881      ;
+; 0.736 ; RAM:u1|sram~23 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 0.000        ; 0.002      ; 0.890      ;
+; 0.749 ; RAM:u1|sram~43 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 0.000        ; -0.002     ; 0.899      ;
+; 0.754 ; RAM:u1|sram~63 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 0.000        ; -0.002     ; 0.904      ;
+; 0.756 ; RAM:u1|sram~15 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 0.000        ; -0.001     ; 0.907      ;
+; 0.768 ; RAM:u1|sram~60 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 0.000        ; -0.004     ; 0.916      ;
+; 0.770 ; RAM:u1|sram~55 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 0.000        ; -0.001     ; 0.921      ;
+; 0.776 ; RAM:u1|sram~1  ; RAM:u1|dataOut[1] ; clk          ; clk         ; 0.000        ; 0.001      ; 0.929      ;
+; 0.779 ; RAM:u1|sram~47 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 0.000        ; -0.001     ; 0.930      ;
+; 0.781 ; RAM:u1|sram~30 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.933      ;
+; 0.782 ; RAM:u1|sram~38 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 0.000        ; -0.003     ; 0.931      ;
+; 0.782 ; RAM:u1|sram~48 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 0.000        ; -0.003     ; 0.931      ;
+; 0.783 ; RAM:u1|sram~2  ; RAM:u1|dataOut[2] ; clk          ; clk         ; 0.000        ; 0.001      ; 0.936      ;
+; 0.789 ; RAM:u1|sram~16 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 0.000        ; -0.001     ; 0.940      ;
+; 0.813 ; RAM:u1|sram~13 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 0.000        ; -0.001     ; 0.964      ;
+; 0.820 ; RAM:u1|sram~53 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 0.000        ; -0.001     ; 0.971      ;
+; 0.824 ; RAM:u1|sram~54 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 0.000        ; -0.001     ; 0.975      ;
+; 0.828 ; RAM:u1|sram~12 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 0.000        ; -0.001     ; 0.979      ;
+; 0.838 ; RAM:u1|sram~31 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 0.000        ; -0.002     ; 0.988      ;
+; 0.844 ; RAM:u1|sram~25 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 0.000        ; -0.002     ; 0.994      ;
+; 0.846 ; RAM:u1|sram~9  ; RAM:u1|dataOut[1] ; clk          ; clk         ; 0.000        ; -0.002     ; 0.996      ;
+; 0.847 ; RAM:u1|sram~5  ; RAM:u1|dataOut[1] ; clk          ; clk         ; 0.000        ; 0.001      ; 1.000      ;
+; 0.852 ; RAM:u1|sram~3  ; RAM:u1|dataOut[3] ; clk          ; clk         ; 0.000        ; 0.001      ; 1.005      ;
+; 0.869 ; RAM:u1|sram~41 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 0.000        ; -0.002     ; 1.019      ;
+; 0.870 ; RAM:u1|sram~18 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 0.000        ; 0.001      ; 1.023      ;
+; 0.873 ; RAM:u1|sram~37 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 0.000        ; -0.003     ; 1.022      ;
+; 0.878 ; RAM:u1|sram~44 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 0.000        ; -0.004     ; 1.026      ;
+; 0.882 ; RAM:u1|sram~17 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 0.000        ; 0.002      ; 1.036      ;
+; 0.895 ; RAM:u1|sram~22 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 0.000        ; 0.001      ; 1.048      ;
+; 0.896 ; RAM:u1|sram~61 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 0.000        ; -0.002     ; 1.046      ;
+; 0.911 ; RAM:u1|sram~11 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 0.000        ; -0.002     ; 1.061      ;
+; 0.911 ; RAM:u1|sram~57 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 0.000        ; -0.002     ; 1.061      ;
+; 0.921 ; RAM:u1|sram~35 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 0.000        ; -0.003     ; 1.070      ;
+; 0.927 ; RAM:u1|sram~29 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 0.000        ; -0.002     ; 1.077      ;
+; 0.942 ; RAM:u1|sram~34 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 0.000        ; -0.003     ; 1.091      ;
+; 0.944 ; RAM:u1|sram~0  ; RAM:u1|dataOut[0] ; clk          ; clk         ; 0.000        ; -0.002     ; 1.094      ;
+; 0.947 ; RAM:u1|sram~21 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 0.000        ; 0.002      ; 1.101      ;
+; 0.950 ; RAM:u1|sram~40 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 0.000        ; -0.005     ; 1.097      ;
+; 0.957 ; RAM:u1|sram~19 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 0.000        ; 0.002      ; 1.111      ;
+; 0.963 ; RAM:u1|sram~32 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 0.000        ; -0.006     ; 1.109      ;
+; 0.969 ; RAM:u1|sram~14 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 0.000        ; -0.001     ; 1.120      ;
+; 0.969 ; RAM:u1|sram~59 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 0.000        ; -0.002     ; 1.119      ;
+; 0.971 ; RAM:u1|sram~4  ; RAM:u1|dataOut[0] ; clk          ; clk         ; 0.000        ; -0.002     ; 1.121      ;
+; 0.972 ; RAM:u1|sram~28 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 0.000        ; -0.003     ; 1.121      ;
+; 0.981 ; RAM:u1|sram~39 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 0.000        ; -0.003     ; 1.130      ;
+; 0.991 ; RAM:u1|sram~36 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 0.000        ; -0.006     ; 1.137      ;
+; 0.999 ; RAM:u1|sram~10 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 0.000        ; -0.002     ; 1.149      ;
+; 1.002 ; RAM:u1|sram~27 ; RAM:u1|dataOut[3] ; clk          ; clk         ; 0.000        ; -0.002     ; 1.152      ;
+; 1.009 ; RAM:u1|sram~24 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 0.000        ; -0.005     ; 1.156      ;
+; 1.012 ; RAM:u1|sram~46 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 0.000        ; -0.003     ; 1.161      ;
+; 1.017 ; RAM:u1|sram~56 ; RAM:u1|dataOut[0] ; clk          ; clk         ; 0.000        ; -0.005     ; 1.164      ;
+; 1.043 ; RAM:u1|sram~42 ; RAM:u1|dataOut[2] ; clk          ; clk         ; 0.000        ; -0.002     ; 1.193      ;
+; 1.086 ; RAM:u1|sram~33 ; RAM:u1|dataOut[1] ; clk          ; clk         ; 0.000        ; -0.003     ; 1.235      ;
++-------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                              ;
++--------+--------------+----------------+------------------+-------+------------+-------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target            ;
++--------+--------------+----------------+------------------+-------+------------+-------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|dataOut[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|dataOut[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|dataOut[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|dataOut[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|dataOut[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|dataOut[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|dataOut[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|dataOut[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~0     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~0     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~1     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~1     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~10    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~10    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~11    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~11    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~12    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~12    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~13    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~13    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~14    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~14    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~15    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~15    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~16    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~16    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~17    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~17    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~18    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~18    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~19    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~19    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~2     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~2     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~20    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~20    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~21    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~21    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~22    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~22    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~23    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~23    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~24    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~24    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~25    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~25    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~26    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~26    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~27    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~27    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~28    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~28    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~29    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~29    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~3     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~3     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~30    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~30    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~31    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~31    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~32    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~32    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~33    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~33    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~34    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~34    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~35    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~35    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~36    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~36    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~37    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~37    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~38    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~38    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~39    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~39    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~4     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~4     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~40    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~40    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~41    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~41    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~42    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~42    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~43    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~43    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~44    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~44    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~45    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~45    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~46    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~46    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~47    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~47    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~48    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~48    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~49    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RAM:u1|sram~49    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RAM:u1|sram~5     ;
++--------+--------------+----------------+------------------+-------+------------+-------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; CS        ; clk        ; 2.754 ; 2.754 ; Rise       ; clk             ;
+; WE        ; clk        ; 2.713 ; 2.713 ; Rise       ; clk             ;
+; a[*]      ; clk        ; 2.762 ; 2.762 ; Rise       ; clk             ;
+;  a[0]     ; clk        ; 2.762 ; 2.762 ; Rise       ; clk             ;
+;  a[1]     ; clk        ; 2.628 ; 2.628 ; Rise       ; clk             ;
+;  a[2]     ; clk        ; 2.583 ; 2.583 ; Rise       ; clk             ;
+;  a[3]     ; clk        ; 2.525 ; 2.525 ; Rise       ; clk             ;
+; addr[*]   ; clk        ; 3.031 ; 3.031 ; Rise       ; clk             ;
+;  addr[0]  ; clk        ; 0.925 ; 0.925 ; Rise       ; clk             ;
+;  addr[1]  ; clk        ; 0.878 ; 0.878 ; Rise       ; clk             ;
+;  addr[2]  ; clk        ; 3.031 ; 3.031 ; Rise       ; clk             ;
+;  addr[3]  ; clk        ; 2.974 ; 2.974 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; CS        ; clk        ; -2.116 ; -2.116 ; Rise       ; clk             ;
+; WE        ; clk        ; -1.901 ; -1.901 ; Rise       ; clk             ;
+; a[*]      ; clk        ; -1.625 ; -1.625 ; Rise       ; clk             ;
+;  a[0]     ; clk        ; -1.625 ; -1.625 ; Rise       ; clk             ;
+;  a[1]     ; clk        ; -1.967 ; -1.967 ; Rise       ; clk             ;
+;  a[2]     ; clk        ; -1.932 ; -1.932 ; Rise       ; clk             ;
+;  a[3]     ; clk        ; -1.953 ; -1.953 ; Rise       ; clk             ;
+; addr[*]   ; clk        ; 0.308  ; 0.308  ; Rise       ; clk             ;
+;  addr[0]  ; clk        ; 0.308  ; 0.308  ; Rise       ; clk             ;
+;  addr[1]  ; clk        ; 0.111  ; 0.111  ; Rise       ; clk             ;
+;  addr[2]  ; clk        ; -1.878 ; -1.878 ; Rise       ; clk             ;
+;  addr[3]  ; clk        ; -1.992 ; -1.992 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; dataOut[*]  ; clk        ; 3.667 ; 3.667 ; Rise       ; clk             ;
+;  dataOut[0] ; clk        ; 3.658 ; 3.658 ; Rise       ; clk             ;
+;  dataOut[1] ; clk        ; 3.660 ; 3.660 ; Rise       ; clk             ;
+;  dataOut[2] ; clk        ; 3.664 ; 3.664 ; Rise       ; clk             ;
+;  dataOut[3] ; clk        ; 3.667 ; 3.667 ; Rise       ; clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; dataOut[*]  ; clk        ; 3.658 ; 3.658 ; Rise       ; clk             ;
+;  dataOut[0] ; clk        ; 3.658 ; 3.658 ; Rise       ; clk             ;
+;  dataOut[1] ; clk        ; 3.660 ; 3.660 ; Rise       ; clk             ;
+;  dataOut[2] ; clk        ; 3.664 ; 3.664 ; Rise       ; clk             ;
+;  dataOut[3] ; clk        ; 3.667 ; 3.667 ; Rise       ; clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                          ;
++------------------+--------+-------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -1.707 ; 0.546 ; N/A      ; N/A     ; -1.380              ;
+;  clk             ; -1.707 ; 0.546 ; N/A      ; N/A     ; -1.380              ;
+; Design-wide TNS  ; -6.425 ; 0.0   ; 0.0      ; 0.0     ; -69.38              ;
+;  clk             ; -6.425 ; 0.000 ; N/A      ; N/A     ; -69.380             ;
++------------------+--------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; CS        ; clk        ; 5.279 ; 5.279 ; Rise       ; clk             ;
+; WE        ; clk        ; 5.221 ; 5.221 ; Rise       ; clk             ;
+; a[*]      ; clk        ; 5.482 ; 5.482 ; Rise       ; clk             ;
+;  a[0]     ; clk        ; 5.482 ; 5.482 ; Rise       ; clk             ;
+;  a[1]     ; clk        ; 5.197 ; 5.197 ; Rise       ; clk             ;
+;  a[2]     ; clk        ; 5.079 ; 5.079 ; Rise       ; clk             ;
+;  a[3]     ; clk        ; 4.930 ; 4.930 ; Rise       ; clk             ;
+; addr[*]   ; clk        ; 5.944 ; 5.944 ; Rise       ; clk             ;
+;  addr[0]  ; clk        ; 2.597 ; 2.597 ; Rise       ; clk             ;
+;  addr[1]  ; clk        ; 2.439 ; 2.439 ; Rise       ; clk             ;
+;  addr[2]  ; clk        ; 5.944 ; 5.944 ; Rise       ; clk             ;
+;  addr[3]  ; clk        ; 5.793 ; 5.793 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; CS        ; clk        ; -2.116 ; -2.116 ; Rise       ; clk             ;
+; WE        ; clk        ; -1.901 ; -1.901 ; Rise       ; clk             ;
+; a[*]      ; clk        ; -1.625 ; -1.625 ; Rise       ; clk             ;
+;  a[0]     ; clk        ; -1.625 ; -1.625 ; Rise       ; clk             ;
+;  a[1]     ; clk        ; -1.967 ; -1.967 ; Rise       ; clk             ;
+;  a[2]     ; clk        ; -1.932 ; -1.932 ; Rise       ; clk             ;
+;  a[3]     ; clk        ; -1.953 ; -1.953 ; Rise       ; clk             ;
+; addr[*]   ; clk        ; 0.308  ; 0.308  ; Rise       ; clk             ;
+;  addr[0]  ; clk        ; 0.308  ; 0.308  ; Rise       ; clk             ;
+;  addr[1]  ; clk        ; 0.111  ; 0.111  ; Rise       ; clk             ;
+;  addr[2]  ; clk        ; -1.878 ; -1.878 ; Rise       ; clk             ;
+;  addr[3]  ; clk        ; -1.992 ; -1.992 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; dataOut[*]  ; clk        ; 6.392 ; 6.392 ; Rise       ; clk             ;
+;  dataOut[0] ; clk        ; 6.381 ; 6.381 ; Rise       ; clk             ;
+;  dataOut[1] ; clk        ; 6.383 ; 6.383 ; Rise       ; clk             ;
+;  dataOut[2] ; clk        ; 6.389 ; 6.389 ; Rise       ; clk             ;
+;  dataOut[3] ; clk        ; 6.392 ; 6.392 ; Rise       ; clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; dataOut[*]  ; clk        ; 3.658 ; 3.658 ; Rise       ; clk             ;
+;  dataOut[0] ; clk        ; 3.658 ; 3.658 ; Rise       ; clk             ;
+;  dataOut[1] ; clk        ; 3.660 ; 3.660 ; Rise       ; clk             ;
+;  dataOut[2] ; clk        ; 3.664 ; 3.664 ; Rise       ; clk             ;
+;  dataOut[3] ; clk        ; 3.667 ; 3.667 ; Rise       ; clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 64       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 64       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 10    ; 10   ;
+; Unconstrained Input Port Paths  ; 564   ; 564  ;
+; Unconstrained Output Ports      ; 4     ; 4    ;
+; Unconstrained Output Port Paths ; 4     ; 4    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+    Info: Processing started: Mon Nov 22 23:20:04 2021
+Info: Command: quartus_sta RAM_cau2 -c RAM_cau2
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'RAM_cau2.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.707
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.707        -6.425 clk 
+Info (332146): Worst-case hold slack is 1.182
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     1.182         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -69.380 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.206
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.206        -0.628 clk 
+Info (332146): Worst-case hold slack is 0.546
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.546         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -69.380 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4563 megabytes
+    Info: Processing ended: Mon Nov 22 23:20:05 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

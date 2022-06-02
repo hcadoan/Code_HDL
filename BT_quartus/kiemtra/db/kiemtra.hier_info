@@ -1,0 +1,143 @@
+|kiemtra
+y[0] <= or2.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= sosanh1bit:s8.port1
+y[2] <= or1.DB_MAX_OUTPUT_PORT_TYPE
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+a[6] => a[6].IN1
+a[7] => a[7].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+b[4] => b[4].IN1
+b[5] => b[5].IN1
+b[6] => b[6].IN1
+b[7] => b[7].IN1
+e => e.IN1
+
+
+|kiemtra|sosanh1bit:s1
+y0 <= y0.DB_MAX_OUTPUT_PORT_TYPE
+y1 <= y1.DB_MAX_OUTPUT_PORT_TYPE
+y2 <= y2.DB_MAX_OUTPUT_PORT_TYPE
+a => y1.IN0
+a => y2.IN0
+a => y0.IN0
+b => y0.IN1
+b => y1.IN1
+b => y2.IN1
+e => y0.IN1
+e => y1.IN1
+e => y2.IN1
+
+
+|kiemtra|sosanh1bit:s2
+y0 <= y0.DB_MAX_OUTPUT_PORT_TYPE
+y1 <= y1.DB_MAX_OUTPUT_PORT_TYPE
+y2 <= y2.DB_MAX_OUTPUT_PORT_TYPE
+a => y1.IN0
+a => y2.IN0
+a => y0.IN0
+b => y0.IN1
+b => y1.IN1
+b => y2.IN1
+e => y0.IN1
+e => y1.IN1
+e => y2.IN1
+
+
+|kiemtra|sosanh1bit:s3
+y0 <= y0.DB_MAX_OUTPUT_PORT_TYPE
+y1 <= y1.DB_MAX_OUTPUT_PORT_TYPE
+y2 <= y2.DB_MAX_OUTPUT_PORT_TYPE
+a => y1.IN0
+a => y2.IN0
+a => y0.IN0
+b => y0.IN1
+b => y1.IN1
+b => y2.IN1
+e => y0.IN1
+e => y1.IN1
+e => y2.IN1
+
+
+|kiemtra|sosanh1bit:s4
+y0 <= y0.DB_MAX_OUTPUT_PORT_TYPE
+y1 <= y1.DB_MAX_OUTPUT_PORT_TYPE
+y2 <= y2.DB_MAX_OUTPUT_PORT_TYPE
+a => y1.IN0
+a => y2.IN0
+a => y0.IN0
+b => y0.IN1
+b => y1.IN1
+b => y2.IN1
+e => y0.IN1
+e => y1.IN1
+e => y2.IN1
+
+
+|kiemtra|sosanh1bit:s5
+y0 <= y0.DB_MAX_OUTPUT_PORT_TYPE
+y1 <= y1.DB_MAX_OUTPUT_PORT_TYPE
+y2 <= y2.DB_MAX_OUTPUT_PORT_TYPE
+a => y1.IN0
+a => y2.IN0
+a => y0.IN0
+b => y0.IN1
+b => y1.IN1
+b => y2.IN1
+e => y0.IN1
+e => y1.IN1
+e => y2.IN1
+
+
+|kiemtra|sosanh1bit:s6
+y0 <= y0.DB_MAX_OUTPUT_PORT_TYPE
+y1 <= y1.DB_MAX_OUTPUT_PORT_TYPE
+y2 <= y2.DB_MAX_OUTPUT_PORT_TYPE
+a => y1.IN0
+a => y2.IN0
+a => y0.IN0
+b => y0.IN1
+b => y1.IN1
+b => y2.IN1
+e => y0.IN1
+e => y1.IN1
+e => y2.IN1
+
+
+|kiemtra|sosanh1bit:s7
+y0 <= y0.DB_MAX_OUTPUT_PORT_TYPE
+y1 <= y1.DB_MAX_OUTPUT_PORT_TYPE
+y2 <= y2.DB_MAX_OUTPUT_PORT_TYPE
+a => y1.IN0
+a => y2.IN0
+a => y0.IN0
+b => y0.IN1
+b => y1.IN1
+b => y2.IN1
+e => y0.IN1
+e => y1.IN1
+e => y2.IN1
+
+
+|kiemtra|sosanh1bit:s8
+y0 <= y0.DB_MAX_OUTPUT_PORT_TYPE
+y1 <= y1.DB_MAX_OUTPUT_PORT_TYPE
+y2 <= y2.DB_MAX_OUTPUT_PORT_TYPE
+a => y1.IN0
+a => y2.IN0
+a => y0.IN0
+b => y0.IN1
+b => y1.IN1
+b => y2.IN1
+e => y0.IN1
+e => y1.IN1
+e => y2.IN1
+
+

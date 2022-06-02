@@ -1,0 +1,80 @@
+|mux51_led7
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW1[0] => SW1[0].IN1
+SW1[1] => SW1[1].IN1
+SW1[2] => SW1[2].IN1
+SW2[0] => SW2[0].IN1
+SW2[1] => SW2[1].IN1
+SW2[2] => SW2[2].IN1
+SW3[0] => SW3[0].IN1
+SW3[1] => SW3[1].IN1
+SW3[2] => SW3[2].IN1
+SW4[0] => SW4[0].IN1
+SW4[1] => SW4[1].IN1
+SW4[2] => SW4[2].IN1
+SW5[0] => SW5[0].IN1
+SW5[1] => SW5[1].IN1
+SW5[2] => SW5[2].IN1
+HEX0[0] <= giaima_led7:comb_4.port1
+HEX0[1] <= giaima_led7:comb_4.port1
+HEX0[2] <= giaima_led7:comb_4.port1
+HEX0[3] <= giaima_led7:comb_4.port1
+HEX0[4] <= giaima_led7:comb_4.port1
+HEX0[5] <= giaima_led7:comb_4.port1
+HEX0[6] <= giaima_led7:comb_4.port1
+HEX0[7] <= giaima_led7:comb_4.port1
+
+
+|mux51_led7|mux51_3bit:comb_3
+S[0] => Mux0.IN5
+S[0] => Mux1.IN5
+S[0] => Mux2.IN5
+S[0] => Mux3.IN10
+S[1] => Mux0.IN4
+S[1] => Mux1.IN4
+S[1] => Mux2.IN4
+S[1] => Mux3.IN9
+S[2] => Mux0.IN3
+S[2] => Mux1.IN3
+S[2] => Mux2.IN3
+S[2] => Mux3.IN8
+A[0] => Mux0.IN6
+A[1] => Mux1.IN6
+A[2] => Mux2.IN6
+B[0] => Mux0.IN7
+B[1] => Mux1.IN7
+B[2] => Mux2.IN7
+C[0] => Mux0.IN8
+C[1] => Mux1.IN8
+C[2] => Mux2.IN8
+D[0] => Mux0.IN9
+D[1] => Mux1.IN9
+D[2] => Mux2.IN9
+E[0] => Mux0.IN10
+E[1] => Mux1.IN10
+E[2] => Mux2.IN10
+M[0] <= M[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+M[1] <= M[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+M[2] <= M[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux51_led7|giaima_led7:comb_4
+M[0] => Decoder1.IN2
+M[0] => Decoder2.IN1
+M[1] => Decoder0.IN1
+M[1] => Decoder1.IN1
+M[1] => Decoder2.IN0
+M[2] => Decoder0.IN0
+M[2] => Decoder1.IN0
+HEX0[0] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[1] <= Decoder2.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[2] <= Decoder2.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[3] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[4] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[5] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[6] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[7] <= <VCC>
+
+

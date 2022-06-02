@@ -1,0 +1,39 @@
+// rom 16x4
+// co 16 dia chi(addr co 4 bit), du lieu 4 bit
+
+module ROM(dataOut,addr,CS,rd,clk);
+output reg [3:0]dataOut;
+input [3:0]addr;
+input cs,rd,clk;
+reg [3:0] rom[15:0];
+initial
+begin
+rom[4'b0000] = 4'b1111;
+rom[4'b0001] = 4'b1110;
+rom[4'b0010] = 4'b1101;
+rom[4'b0011] = 4'b1100;
+rom[4'b0100] = 4'b1011;
+rom[4'b0101] = 4'b1010;
+rom[4'b0110] = 4'b1001;
+rom[4'b0111] = 4'b1000;
+rom[4'b1000] = 4'b0111;
+rom[4'b1001] = 4'b0110;
+rom[4'b1010] = 4'b0101;
+rom[4'b1011] = 4'b0100;
+rom[4'b1100] = 4'b0011;
+rom[4'b1101] = 4'b0010;
+rom[4'b1110] = 4'b0001;
+rom[4'b1111] = 4'b0000;
+end
+always @(posedge clk)
+begin
+  if(cs == 1'b1)
+  begin
+     if(rd == 1'b1)
+	     dataOut <= rom[addr];
+     else 
+        dataOut <= dataOut;	  
+  end
+  else dataOut = 4'bxxxx;
+end
+endmodule

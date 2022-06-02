@@ -1,0 +1,59 @@
+module FSM(ck,rs,X,Y1,Y2);
+parameter Start = 4'b0000;
+parameter S1 = 4'b0001;
+parameter S10 = 4'b0010;
+parameter S101 = 4'b0011;
+parameter S1011 = 4'b0100;
+parameter S0 = 4'b0101;
+parameter S01 = 4'b0110;
+parameter S010 = 4'b0111;
+parameter S0101 = 4'b1000;
+input ck,rs,X;
+output Y1,Y2;
+reg Y1,Y2;
+reg [3:0] c,n;
+always @ (*)
+begin
+case(c)
+Start : if(X) n = S1;
+       else n = S0;
+S1 : if(X) n = c;
+       else n = S10;
+S10 : if(X) n = S101;
+       else n = S0;
+S101 : if(X) n = S1011;
+       else n = S010;
+S1011 : if(X) n = S1;
+       else n = S10;
+S0 : if(X) n = S01;
+       else n = c;
+S01 : if(X) n = S1;
+       else n = S010;
+S010 : if(X) n = S0101;
+       else n = S0;
+S0101 : if(X) n = S1011;
+       else n = S010;
+default n = Start;
+endcase
+end
+always @ (posedge ck or posedge rs)
+begin
+if(rs == 1)
+c = Start;
+else c = n;
+end
+always @ (*)
+begin
+case(c)
+Start : Y1 = 1'b0; Y2 = 1'b0;
+S1 : Y1 = 1'b0; Y2 = 1'b0;
+S10 : Y1 = 1'b0; Y2 = 1'b0;
+S101 : Y1 = 1'b0; Y2 = 1'b0;
+S1011 : Y1 = 1'b1; Y2 = 1'b0;
+S0 : Y1 = 1'b0; Y2 = 1'b0;
+S01 : Y1 = 1'b0; Y2 = 1'b0;
+S010 : Y1 = 1'b0; Y2 = 1'b0;
+S0101 : Y1 = 1'b0; Y2 = 1'b1;
+endcase
+end
+endmodule

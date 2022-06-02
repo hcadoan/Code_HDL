@@ -1,0 +1,175 @@
+|nhan4bit
+a[0] => n0.IN0
+a[0] => n2.IN0
+a[0] => n8.IN0
+a[0] => n12.IN0
+a[1] => n1.IN0
+a[1] => n4.IN0
+a[1] => n9.IN0
+a[1] => n13.IN0
+a[2] => n3.IN0
+a[2] => n6.IN0
+a[2] => n10.IN0
+a[2] => n14.IN0
+a[3] => n5.IN0
+a[3] => n7.IN0
+a[3] => n11.IN0
+a[3] => n15.IN0
+b[0] => n0.IN1
+b[0] => n1.IN1
+b[0] => n3.IN1
+b[0] => n5.IN1
+b[1] => n2.IN1
+b[1] => n4.IN1
+b[1] => n6.IN1
+b[1] => n7.IN1
+b[2] => n8.IN1
+b[2] => n9.IN1
+b[2] => n10.IN1
+b[2] => n11.IN1
+b[3] => n12.IN1
+b[3] => n13.IN1
+b[3] => n14.IN1
+b[3] => n15.IN1
+p[0] <= n0.DB_MAX_OUTPUT_PORT_TYPE
+p[1] <= fa:u1.port3
+p[2] <= fa:u5.port3
+p[3] <= fa:u9.port3
+p[4] <= fa:u10.port3
+p[5] <= fa:u11.port3
+p[6] <= fa:u12.port3
+p[7] <= fa:u12.port4
+
+
+|nhan4bit|fa:u1
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan4bit|fa:u2
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan4bit|fa:u3
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan4bit|fa:u4
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan4bit|fa:u5
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan4bit|fa:u6
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan4bit|fa:u7
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan4bit|fa:u8
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan4bit|fa:u9
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan4bit|fa:u10
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan4bit|fa:u11
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nhan4bit|fa:u12
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+

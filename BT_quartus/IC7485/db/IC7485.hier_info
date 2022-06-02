@@ -1,0 +1,36 @@
+|IC7485
+A0 => LessThan6.IN1
+A0 => LessThan7.IN1
+A1 => LessThan4.IN1
+A1 => LessThan5.IN1
+A2 => LessThan2.IN1
+A2 => LessThan3.IN1
+A3 => LessThan0.IN1
+A3 => LessThan1.IN1
+B0 => LessThan6.IN2
+B0 => LessThan7.IN2
+B1 => LessThan4.IN2
+B1 => LessThan5.IN2
+B2 => LessThan2.IN2
+B2 => LessThan3.IN2
+B3 => LessThan0.IN2
+B3 => LessThan1.IN2
+AlBin => always0.IN0
+AlBin => always0.IN0
+AlBin => always0.IN0
+AlBin => always0.IN0
+AnBin => always0.IN1
+AnBin => always0.IN1
+AnBin => always0.IN1
+AnBin => always0.IN1
+AbBin => always0.IN1
+AbBin => always0.IN1
+AbBin => always0.IN1
+AbBin => always0.IN1
+AbBin => always0.IN1
+AbBin => always0.IN1
+AlB <= AlB$latch.DB_MAX_OUTPUT_PORT_TYPE
+AnB <= AnB$latch.DB_MAX_OUTPUT_PORT_TYPE
+AbB <= AbB$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,67 @@
+|decoder416
+A => A.IN2
+B => B.IN2
+C => C.IN2
+D => D.IN1
+Y[0] <= decoder3_8:U1.port2
+Y[1] <= decoder3_8:U1.port2
+Y[2] <= decoder3_8:U1.port2
+Y[3] <= decoder3_8:U1.port2
+Y[4] <= decoder3_8:U1.port2
+Y[5] <= decoder3_8:U1.port2
+Y[6] <= decoder3_8:U1.port2
+Y[7] <= decoder3_8:U1.port2
+Y[8] <= decoder3_8:U2.port2
+Y[9] <= decoder3_8:U2.port2
+Y[10] <= decoder3_8:U2.port2
+Y[11] <= decoder3_8:U2.port2
+Y[12] <= decoder3_8:U2.port2
+Y[13] <= decoder3_8:U2.port2
+Y[14] <= decoder3_8:U2.port2
+Y[15] <= decoder3_8:U2.port2
+
+
+|decoder416|decoder3_8:U1
+e => X.OUTPUTSELECT
+e => X.OUTPUTSELECT
+e => X.OUTPUTSELECT
+e => X.OUTPUTSELECT
+e => X.OUTPUTSELECT
+e => X.OUTPUTSELECT
+e => X.OUTPUTSELECT
+e => X.OUTPUTSELECT
+S[0] => Decoder0.IN2
+S[1] => Decoder0.IN1
+S[2] => Decoder0.IN0
+X[0] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[1] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[2] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[3] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[4] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[5] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[6] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[7] <= X.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder416|decoder3_8:U2
+e => X.OUTPUTSELECT
+e => X.OUTPUTSELECT
+e => X.OUTPUTSELECT
+e => X.OUTPUTSELECT
+e => X.OUTPUTSELECT
+e => X.OUTPUTSELECT
+e => X.OUTPUTSELECT
+e => X.OUTPUTSELECT
+S[0] => Decoder0.IN2
+S[1] => Decoder0.IN1
+S[2] => Decoder0.IN0
+X[0] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[1] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[2] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[3] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[4] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[5] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[6] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[7] <= X.DB_MAX_OUTPUT_PORT_TYPE
+
+

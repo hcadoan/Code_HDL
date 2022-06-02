@@ -1,0 +1,13 @@
+|FSM
+ck => c[0]~reg0.CLK
+ck => c[1]~reg0.CLK
+ck => c[2]~reg0.CLK
+rs => c[0]~reg0.ACLR
+rs => c[1]~reg0.ACLR
+rs => c[2]~reg0.ACLR
+y <= y$latch.DB_MAX_OUTPUT_PORT_TYPE
+c[0] <= c[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c[1] <= c[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c[2] <= c[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

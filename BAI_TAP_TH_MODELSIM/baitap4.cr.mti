@@ -1,0 +1,11 @@
+{D:/HOANG CA/THUC HANH HDL/BAI TAP TH/baitap4.v} {1 {vlog -work work {D:/HOANG CA/THUC HANH HDL/BAI TAP TH/baitap4.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module baitap4
+-- Compiling module dem
+-- Compiling module giaima_np
+-- Compiling module TB_baitap4
+
+Top level modules:
+	TB_baitap4
+
+} {} {}}
